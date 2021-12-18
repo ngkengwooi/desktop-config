@@ -1,8 +1,10 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install core apps
-    apt: name={{item}}
+  - name: Install apps
+    package:
+      name: {{item}}
+      state: present
     with_items:
     - firefox-esr
     - gimp
