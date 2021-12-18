@@ -1,0 +1,12 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install core apps
+    apt: name={{item}}
+    with_items:
+    - firefox-esr
+    - gimp
+    - inkscape
+    - freecad
+    - prusa-slicer
+    - flatpak
