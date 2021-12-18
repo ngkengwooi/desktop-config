@@ -154,10 +154,8 @@
     with_items:
     - com.github.tchx84.Flatseal
     - com.microsoft.Teams
+    - org.freedesktop.Platform.ffmpeg-full
     - org.jitsi.jitsi-meet
     - org.mozilla.firefox
     - org.zotero.Zotero
     - us.zoom.Zoom
-    
-  - name: Install ffmpeg-full runtime in flatpak (for Firefox flatpak)
-    shell: flatpak -y install --runtime --noninteractive org.freedesktop.Platform.ffmpeg-full
