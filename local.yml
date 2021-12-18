@@ -1,6 +1,16 @@
 - hosts: localhost
   become: true
-  tasks:
+  
+  pre_tasks:
+  
+  - name: Register public keys for repos
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:    - 
+    - fasttrack-archive-keyring
+  
   - name: Enable repositories
     apt_repository:
       repo: "{{item}}"
@@ -12,66 +22,96 @@
     - deb-src https://deb.debian.org/debian/ sid main contrib non-free
     - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib
     - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib
-  - name: Disable repositories
-    apt_repository:
-      repo: "{{item}}"
-      state: absent
+    
+  tasks:
+  
+  - name: Install system utilities
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
     with_items:
-    - deb https://download.jitsi.org stable/
-  - name: Install apps
+    - clamtk
+    - filezilla
+    - remmina
+    
+  - name: Configure GNOME desktop environment
     package:
       name: "{{item}}"
       update_cache: yes
       state: latest
     with_items:
     - adwaita-qt
-    - audacity
-    - brasero
-    - blender
-    - clamtk
-    - evolution-ews
-    - fasttrack-archive-keyring
-    - ffmpeg
-    - filezilla
     - flatpak
-    - freecad
-    - gchempaint
-    - gcu-bin
-    - ghostwriter
-    - gimp
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-caffeine
-    - gnome-subtitles
-    - handbrake
-    - homebank
     - ibus-libpinyin
-    - imagej
-    - inkscape
+    - qt5-gtk-platformtheme
+    - qt5-style-plugins    
+    
+  - name: Install 3D printing software
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - freecad
+    - pronterface
+    - prusa-slicer
+  
+  - name: Install office tools
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - evolution-ews
+    - ghostwriter
+    - homebank
     - keepassxc
-    - lame
-    - libreoffice
     - libreoffice-gnome
     - lyx
-    - mkvtoolnix-gui
-    - musescore3
     - nextcloud-desktop
     - pandoc
     - pdfarranger
-    - pitivi
-    - pronterface
-    - prusa-slicer
+    
+  - name: Install scientific tools
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - gchempaint
+    - gcu-bin
+    - imagej
     - pspp
-    - puddletag
-    - qt5-gtk-platformtheme
-    - qt5-style-plugins
     - r-base
     - r-cran-rcmdr
-    - remmina
+    
+  - name: Install multimedia tools
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - audacity
+    - blender
+    - brasero
+    - ffmpeg
+    - gimp
+    - gnome-subtitles
+    - handbrake
+    - inkscape
+    - lame
+    - mkvtoolnix-gui
+    - musescore3
+    - pitivi
+    - puddletag
     - rhythmbox-plugin-alternative-toolbar
     - simplescreenrecorder
     - soundconverter
     
-  - name: Install Firefox and add-ons
+  - name: Install Firefox ESR and add-ons
     package:
       name: "{{item}}"
       update_cache: yes
