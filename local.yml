@@ -1,6 +1,12 @@
 - hosts: localhost
   become: true
   tasks:
+  - name: Configure public keys
+    apt_key:
+      url: "{{item}}"
+      state: present
+    with_items:
+    - https://download.jitsi.org/jitsi-key.gpg.key
   - name: Configure repositories
     apt_repository:
       repo: "{{item}}"
@@ -12,6 +18,7 @@
     - deb-src https://deb.debian.org/debian/ sid main contrib non-free
     - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib
     - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib
+    - deb https://download.jitsi.org stable/
   - name: Install apps
     package: 
       name: "{{item}}"
@@ -44,6 +51,7 @@
     - ibus-libpinyin
     - imagej
     - inkscape
+    - jitsi
     - keepassxc
     - lame
     - libreoffice
