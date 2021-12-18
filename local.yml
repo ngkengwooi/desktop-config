@@ -86,7 +86,7 @@
       state: latest
     with_items:
     - firefox-esr
-    - webext-ublock-origin-firerfox
+    - webext-ublock-origin-firefox
     - webext-https-everywhere
     - webext-privacy-badger
     - webext-keepassxc-browser
