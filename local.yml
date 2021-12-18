@@ -20,6 +20,7 @@
     - 0ad
     - adwaita-qt
     - audacity
+    - brasero
     - blender
     - clamtk
     - evolution-ews
@@ -53,6 +54,7 @@
     - pronterface
     - prusa-slicer
     - pspp
+    - puddletag
     - qt5-gtk-platformtheme
     - qt5-style-plugins
     - r-base
