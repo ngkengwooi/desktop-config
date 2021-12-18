@@ -81,9 +81,14 @@
     - virtualbox
     - virtualbox-guest-additions-iso
     - warzone2100
-  - name: Uninstall apps
+  - name: Install Firefox and add-ons
     package:
       name: "{{item}}"
-      state: absent
+      state: latest
     with_items:
     - firefox-esr
+    - webext-ublock-origin-firerfox
+    - webext-https-everywhere
+    - webext-privacy-badger
+    - webext-keepassxc-browser
+    - webext-bulk-media-downloader
