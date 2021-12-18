@@ -28,7 +28,6 @@
   - name: Install system utilities
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - clamtk
@@ -38,7 +37,6 @@
   - name: Configure GNOME desktop environment
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - adwaita-qt
@@ -52,7 +50,6 @@
   - name: Install 3D printing software
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - freecad
@@ -62,7 +59,6 @@
   - name: Install office tools
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - evolution-ews
@@ -78,7 +74,6 @@
   - name: Install scientific tools
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - gchempaint
@@ -91,7 +86,6 @@
   - name: Install multimedia tools
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - audacity
@@ -114,7 +108,6 @@
   - name: Install Firefox ESR and add-ons
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - firefox-esr
@@ -127,7 +120,6 @@
   - name: Install games
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - 0ad
@@ -142,7 +134,6 @@
   - name: Install VirtualBox (requires Fasttrack repo)
     package:
       name: "{{item}}"
-      update_cache: yes
       state: latest
     with_items:
     - virtualbox
@@ -154,6 +145,7 @@
       method: system
       state: present
     with_items:
+    - https://flathub.org/repo/appstream/com.github.tchx84.Flatseal
     - https://flathub.org/repo/appstream/com.microsoft.Teams.flatpakref
     - https://flathub.org/repo/appstream/org.jitsi.jitsi-meet.flatpakref
     - https://flathub.org/repo/appstream/org.mozilla.firefox.flatpakref
