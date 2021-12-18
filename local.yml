@@ -15,7 +15,7 @@
   - name: Install apps
     package: 
       name: "{{item}}"
-      state: present
+      state: latest
     with_items:
     - blender
     - clamtk
