@@ -35,6 +35,8 @@
     - gimp
     - gnome-games
     - gnome-mastermind
+    - gnome-shell-extension-appindicator
+    - gnome-shell-extension-caffeine
     - gnome-subtitles
     - handbrake
     - homebank
