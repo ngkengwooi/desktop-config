@@ -2,8 +2,7 @@
   become: true
   tasks:
   - name: Install apps
-    package:
-      name: {{item}}
+    package: name={{item}}
       state: present
     with_items:
     - firefox-esr
