@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: rm310
   become: true
   tasks:
   - name: Install core apps
