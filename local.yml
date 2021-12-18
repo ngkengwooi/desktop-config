@@ -17,25 +17,45 @@
       name: "{{item}}"
       state: latest
     with_items:
+    - 0ad
+    - adwaita-qt
+    - audacity
     - blender
     - clamtk
+    - evolution-ews
     - ffmpeg
     - flatpak
     - freecad
     - frogatto
     - gimp
+    - gnome-games
     - gnome-mastermind
     - gnome-subtitles
+    - handbrake
+    - homebank
     - ibus-libpinyin
     - imagej
     - inkscape
     - lame
+    - libreoffice
+    - libreoffice-gnome
+    - lyx
     - mkvtoolnix-gui
+    - musescore3
     - nextcloud-desktop
+    - pitivi
     - pronterface
     - prusa-slicer
+    - qt5-gtk-platformtheme
+    - qt5-style-plugins
+    - remmina
     - rhythmbox-plugin-alternative-toolbar
+    - simplescreenrecorder
     - soundconverter
+    - unknown-horizons
+    - virtualbox
+    - virtualbox-guest-additions-iso
+    - warzone2100
   - name: Uninstall apps
     package:
       name: "{{item}}"
