@@ -17,9 +17,28 @@
       name: "{{item}}"
       state: present
     with_items:
-    - firefox-esr
-    - gimp
-    - inkscape
-    - freecad
-    - prusa-slicer
+    - blender
+    - clamtk
+    - ffmpeg
     - flatpak
+    - freecad
+    - frogatto
+    - gimp
+    - gnome-mastermind
+    - gnome-subtitles
+    - ibus-libpinyin
+    - imagej
+    - inkscape
+    - lame
+    - mkvtoolnix-gui
+    - nextcloud-desktop
+    - pronterface
+    - prusa-slicer
+    - rhythmbox-plugin-alternative-toolbar
+    - soundconverter
+  - name: Uninstall apps
+    package:
+      name: "{{item}}"
+      state: absent
+    with_items:
+      - firefox-esr
