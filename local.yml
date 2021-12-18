@@ -1,12 +1,6 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Configure public keys
-    apt_key:
-      url: "{{item}}"
-      state: absent
-    with_items:
-    - https://download.jitsi.org/jitsi-key.gpg.key
   - name: Enable repositories
     apt_repository:
       repo: "{{item}}"
