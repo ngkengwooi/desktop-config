@@ -24,7 +24,6 @@
       update_cache: yes
       state: latest
     with_items:
-    - 0ad
     - adwaita-qt
     - audacity
     - brasero
@@ -36,13 +35,10 @@
     - filezilla
     - flatpak
     - freecad
-    - frogatto
     - gchempaint
     - gcu-bin
     - ghostwriter
     - gimp
-    - gnome-games
-    - gnome-mastermind
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-caffeine
     - gnome-subtitles
@@ -74,20 +70,40 @@
     - rhythmbox-plugin-alternative-toolbar
     - simplescreenrecorder
     - soundconverter
-    - supertux
-    - supertuxkart
-    - unknown-horizons
-    - virtualbox
-    - virtualbox-guest-additions-iso
-    - warzone2100
+    
   - name: Install Firefox and add-ons
     package:
       name: "{{item}}"
+      update_cache: yes
       state: latest
     with_items:
     - firefox-esr
-    - webext-ublock-origin-firefox
-    - webext-https-everywhere
-    - webext-privacy-badger
-    - webext-keepassxc-browser
     - webext-bulk-media-downloader
+    - webext-https-everywhere
+    - webext-keepassxc-browser
+    - webext-privacy-badger
+    - webext-ublock-origin-firefox
+  
+  - name: Install games
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - 0ad
+    - frogatto
+    - gnome-games
+    - gnome-mastermind
+    - supertux
+    - supertuxkart
+    - unknown-horizons
+    - warzone2100
+    
+  - name: Install VirtualBox (requires Fasttrack repo)
+    package:
+      name: "{{item}}"
+      update_cache: yes
+      state: latest
+    with_items:
+    - virtualbox
+    - virtualbox-guest-additions-iso
