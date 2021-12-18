@@ -27,6 +27,8 @@
     - flatpak
     - freecad
     - frogatto
+    - gchempaint
+    - gcu-bin
     - gimp
     - gnome-games
     - gnome-mastermind
@@ -46,8 +48,11 @@
     - pitivi
     - pronterface
     - prusa-slicer
+    - pspp
     - qt5-gtk-platformtheme
     - qt5-style-plugins
+    - r-base
+    - r-cran-rcmdr
     - remmina
     - rhythmbox-plugin-alternative-toolbar
     - simplescreenrecorder
