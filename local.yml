@@ -23,12 +23,14 @@
     - blender
     - clamtk
     - evolution-ews
+    - fasttrack-archive-keyring
     - ffmpeg
     - flatpak
     - freecad
     - frogatto
     - gchempaint
     - gcu-bin
+    - ghostwriter
     - gimp
     - gnome-games
     - gnome-mastermind
@@ -45,6 +47,8 @@
     - mkvtoolnix-gui
     - musescore3
     - nextcloud-desktop
+    - pandoc
+    - pdfarranger
     - pitivi
     - pronterface
     - prusa-slicer
