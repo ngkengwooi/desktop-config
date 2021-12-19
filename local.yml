@@ -111,11 +111,7 @@
       state: absent
     with_items:
     - firefox-esr
-    - webext-bulk-media-downloader
-    - webext-https-everywhere
-    - webext-keepassxc-browser
-    - webext-privacy-badger
-    - webext-ublock-origin-firefox
+    - webext-*
   
   - name: Install games
     package:
