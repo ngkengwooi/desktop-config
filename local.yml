@@ -105,11 +105,12 @@
     - simplescreenrecorder
     - soundconverter
     
-  - name: Uninstall Firefox ESR and add-ons
+  - name: Uninstall Chromium, Firefox ESR and add-ons
     package:
       name: "{{item}}"
       state: absent
     with_items:
+    - chromium
     - firefox-esr
     - webext-*
   
