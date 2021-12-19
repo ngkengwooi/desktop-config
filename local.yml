@@ -105,10 +105,10 @@
     - simplescreenrecorder
     - soundconverter
     
-  - name: Install Firefox ESR and add-ons
+  - name: Uninstall Firefox ESR and add-ons
     package:
       name: "{{item}}"
-      state: latest
+      state: absent
     with_items:
     - firefox-esr
     - webext-bulk-media-downloader
