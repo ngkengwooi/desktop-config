@@ -33,6 +33,7 @@
     - clamtk
     - filezilla
     - remmina
+    - unattended-upgrades
     
   - name: Configure GNOME desktop environment
     package:
@@ -43,6 +44,7 @@
     - flatpak
     - gnome-shell-extension-appindicator
     - gnome-shell-extension-caffeine
+    - gnome-software-plugin-flatpak
     - ibus-libpinyin
     - qt5-gtk-platformtheme
     - qt5-style-plugins    
