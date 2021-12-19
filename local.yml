@@ -158,7 +158,7 @@
     - com.github.tchx84.Flatseal
     - com.microsoft.Teams
     - com.prusa3d.PrusaSlicer
-    - org.freedesktop.Platform.ffmpeg-full/x86_64/latest
+    - org.freedesktop.Platform.ffmpeg-full/x86_64/stable
     - org.jitsi.jitsi-meet
     - org.mozilla.firefox
     - org.zotero.Zotero
