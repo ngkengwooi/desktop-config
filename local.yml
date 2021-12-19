@@ -54,7 +54,11 @@
     with_items:
     - freecad
     - pronterface
-    - prusa-slicer
+    
+  - name: Uninstall Prusa Slicer from the Debian repo
+    package:
+      name: prusa-slicer
+      state: absent
   
   - name: Install office tools
     package:
@@ -151,6 +155,7 @@
     with_items:
     - com.github.tchx84.Flatseal
     - com.microsoft.Teams
+    - com.prusa3d.PrusaSlicer
     - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
     - org.jitsi.jitsi-meet
     - org.mozilla.firefox
