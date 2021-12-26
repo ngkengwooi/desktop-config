@@ -1,5 +1,10 @@
 - hosts: localhost
   become: true
+  
+  vars:
+  - name: Get DEB architecture
+    shell: dpkg --print-architecture
+    register: deb_architecture
     
   pre_tasks:
   
