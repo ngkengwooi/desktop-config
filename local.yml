@@ -1,16 +1,7 @@
 - hosts: localhost
   become: true
-  
-  vars:
-  - name: Get DEB architecture
-    shell: dpkg --print-architecture
-    register: deb_architecture
     
   pre_tasks:
-  
-  - name: Print DEB architecture
-    debug:
-      msg: "deb_architecture.stdout: {{ deb_architecture.stdout }}"
   
   - name: Register public keys for repos
     package:
@@ -58,9 +49,10 @@
     - qt5-gtk-platformtheme
     - qt5-style-plugins
     
-  - name: Install Bitwarden desktop client
+  - name: Install Bitwarden desktop client (x86_64)
     apt:
       deb: https://github.com/bitwarden/desktop/releases/download/v1.30.0/Bitwarden-1.30.0-amd64.deb
+    when: ansible_architecture == "x86_64"
     
   - name: Install 3D printing software
     package:
@@ -176,6 +168,7 @@
     - org.mozilla.firefox
     - org.zotero.Zotero
     - us.zoom.Zoom
+    when: ansible_architecture == "x86_64"
     
   - name: Install upstream youtube-dl
     pip:
