@@ -1,6 +1,11 @@
 - hosts: localhost
   become: true
   
+  vars:
+  - name: "Get DEB architecture"
+    shell: dpkg --print-architecture
+    register: deb_architecture
+  
   pre_tasks:
   
   - name: Register public keys for repos
@@ -47,7 +52,11 @@
     - gnome-software-plugin-flatpak
     - ibus-libpinyin
     - qt5-gtk-platformtheme
-    - qt5-style-plugins    
+    - qt5-style-plugins
+    
+  - name: Install Bitwarden desktop client
+    apt:
+      deb: https://github.com/bitwarden/desktop/releases/download/v1.30.0/Bitwarden-1.30.0-{{ deb_architecture.stdout }}.deb
     
   - name: Install 3D printing software
     package:
