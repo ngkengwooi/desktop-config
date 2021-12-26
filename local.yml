@@ -8,6 +8,10 @@
     
   pre_tasks:
   
+  - name: Print DEB architecture
+    debug:
+      msg: "deb_architecture.stdout: {{ deb_architecture.stdout }}"
+  
   - name: Register public keys for repos
     package:
       name: "{{item}}"
