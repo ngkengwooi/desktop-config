@@ -49,7 +49,6 @@
       - gimp
       - gnome-games
       - gnome-mastermind
-      - gnome-shell-extension-appindicator
       - gnome-shell-extension-caffeine
       - gnome-software-plugin-flatpak
       - gnome-subtitles
@@ -97,6 +96,7 @@
       state: absent
     with_items:
       - chromium
+      - gnome-shell-extension-appindicator
       - webext-ublock-origin-chromium
     
   - name: Install Bitwarden desktop client (x86_64)
