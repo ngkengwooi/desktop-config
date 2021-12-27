@@ -153,4 +153,6 @@
       state: latest
    
   - name: Enable Adwaita theme for QT applications
-    shell: echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment 
+    copy: 
+      content: "QT_STYLE_OVERRIDE=Adwaita"
+      dest: /etc/environment
