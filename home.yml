@@ -149,11 +149,8 @@
     
   - name: Update Python modules
     pip:
-      name: "{{item}}"
+      name: ["pip", "youtube-dl"]
       state: latest
-    with_items:
-      - pip
-      - youtube-dl
    
   - name: Enable Adwaita theme for QT applications
     shell: echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment 
