@@ -26,6 +26,13 @@
     
   tasks:
   
+  - name: Update system
+    apt:
+      upgrade: dist
+      autoclean: yes
+      autoremove: yes
+      purge: yes
+  
   - name: Install DEB packages from the repos
     package:
       name: "{{item}}"
