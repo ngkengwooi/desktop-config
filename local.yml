@@ -104,7 +104,6 @@
       deb: https://github.com/bitwarden/desktop/releases/download/v1.30.0/Bitwarden-1.30.0-amd64.deb
     when: ansible_architecture == "x86_64"
 
-
   - name: Enable Flathub repo for flatpaks
     flatpak_remote:
       name: flathub
