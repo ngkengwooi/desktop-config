@@ -116,11 +116,21 @@
     - simplescreenrecorder
     - soundconverter
     
+  - name: Install Firefox ESR and addons
+    package: 
+      name: "{{item}}"
+      state: latest
+    with_items:
+      - firefox-esr
+      - webext-ublock-origin-firefox
+      - webext-https-everywhere
+      - webext-privacy-badger
+    
   - name: Uninstall Chromium
     package:
       name: "chromium"
       state: absent
-  
+      
   - name: Install games
     package:
       name: "{{item}}"
@@ -159,13 +169,20 @@
     - com.github.tchx84.Flatseal
     - com.microsoft.Teams
     - com.prusa3d.PrusaSlicer
-    - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
     - org.jitsi.jitsi-meet
-    - org.mozilla.firefox
     - org.zotero.Zotero
     - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
+  - name: Uninstall Firefox flatpak and dependencies
+    flatpak:
+      name: "{{item}}"
+      method: system
+      state: absent
+    with_items:
+    - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+    - org.mozilla.firefox
+      
   - name: Install upstream youtube-dl
     pip:
       name: youtube-dl
