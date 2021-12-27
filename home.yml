@@ -76,6 +76,7 @@
       - nextcloud-desktop
       - pandoc
       - pdfarranger
+      - python3-pip
       - pitivi
       - pronterface
       - prusa-slicer
@@ -145,11 +146,14 @@
       - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
       - org.mozilla.firefox
     when: ansible_architecture == "x86_64"
-      
-  - name: Install upstream youtube-dl
+    
+  - name: Update Python modules
     pip:
-      name: youtube-dl
+      name: "{{item}}"
       state: latest
+    with_items:
+      - pip
+      - youtube-dl
    
   - name: Enable Adwaita theme for QT applications
     shell: echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment 
