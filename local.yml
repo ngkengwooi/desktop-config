@@ -9,150 +9,102 @@
       update_cache: yes
       state: latest
     with_items:
-    - fasttrack-archive-keyring
+      - fasttrack-archive-keyring
   
   - name: Enable repositories
     apt_repository:
       repo: "{{item}}"
       state: present
     with_items:
-    - deb https://deb.debian.org/debian/ bullseye main non-free contrib
-    - deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
-    - deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
-    - deb-src https://deb.debian.org/debian/ sid main contrib non-free
-    - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib
-    - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib
+      - deb https://deb.debian.org/debian/ bullseye main non-free contrib
+      - deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free
+      - deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free
+      - deb-src https://deb.debian.org/debian/ sid main contrib non-free
+      - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib
+      - deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib
     
   tasks:
   
-  - name: Install system utilities
+  - name: Install DEB packages from the repos
     package:
       name: "{{item}}"
       state: latest
     with_items:
-    - clamtk
-    - filezilla
-    - remmina
-    - unattended-upgrades
+      - 0ad
+      - adwaita-qt
+      - audacity
+      - blender
+      - brasero
+      - clamtk
+      - evolution-ews
+      - ffmpeg
+      - filezilla
+      - firefox-esr
+      - flatpak
+      - freecad
+      - frogatto
+      - gchempaint
+      - gcu-bin
+      - ghostwriter
+      - gimp
+      - gnome-games
+      - gnome-mastermind
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-caffeine
+      - gnome-software-plugin-flatpak
+      - gnome-subtitles
+      - handbrake
+      - homebank
+      - ibus-libpinyin
+      - imagej
+      - inkscape
+      - keepassxc
+      - lame
+      - libreoffice-gnome
+      - lyx
+      - mkvtoolnix-gui
+      - musescore3
+      - nextcloud-desktop
+      - pandoc
+      - pdfarranger
+      - pitivi
+      - pronterface
+      - prusa-slicer
+      - pspp
+      - puddletag
+      - qt5-gtk-platformtheme
+      - qt5-style-plugins
+      - r-base
+      - r-cran-rcmdr
+      - remmina
+      - rhythmbox-plugin-alternative-toolbar
+      - simplescreenrecorder
+      - soundconverter
+      - supertux
+      - supertuxkart
+      - unattended-upgrades
+      - unknown-horizons
+      - virtualbox
+      - virtualbox-guest-additions-iso
+      - warzone2100
+      - webext-https-everywhere
+      - webext-privacy-badger
+      - webext-ublock-origin-firefox
     
-  - name: Configure GNOME desktop environment
+  - name: Uninstall DEB packages from the repos
     package:
       name: "{{item}}"
-      state: latest
+      state: absent
     with_items:
-    - adwaita-qt
-    - flatpak
-    - gnome-shell-extension-appindicator
-    - gnome-shell-extension-caffeine
-    - gnome-software-plugin-flatpak
-    - ibus-libpinyin
-    - qt5-gtk-platformtheme
-    - qt5-style-plugins
+      - chromium
+      - webext-ublock-origin-chromium
     
   - name: Install Bitwarden desktop client (x86_64)
     apt:
       deb: https://github.com/bitwarden/desktop/releases/download/v1.30.0/Bitwarden-1.30.0-amd64.deb
     when: ansible_architecture == "x86_64"
-    
-  - name: Install 3D printing software
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - freecad
-    - pronterface
-    
-  - name: Uninstall Prusa Slicer from the Debian repo
-    package:
-      name: prusa-slicer
-      state: absent
-  
-  - name: Install office tools
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - evolution-ews
-    - ghostwriter
-    - homebank
-    - keepassxc
-    - libreoffice-gnome
-    - lyx
-    - nextcloud-desktop
-    - pandoc
-    - pdfarranger
-    
-  - name: Install scientific tools
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - gchempaint
-    - gcu-bin
-    - imagej
-    - pspp
-    - r-base
-    - r-cran-rcmdr
-    
-  - name: Install multimedia tools
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - audacity
-    - blender
-    - brasero
-    - ffmpeg
-    - gimp
-    - gnome-subtitles
-    - handbrake
-    - inkscape
-    - lame
-    - mkvtoolnix-gui
-    - musescore3
-    - pitivi
-    - puddletag
-    - rhythmbox-plugin-alternative-toolbar
-    - simplescreenrecorder
-    - soundconverter
-    
-  - name: Install Firefox ESR and addons
-    package: 
-      name: "{{item}}"
-      state: latest
-    with_items:
-      - firefox-esr
-      - webext-ublock-origin-firefox
-      - webext-https-everywhere
-      - webext-privacy-badger
-    
-  - name: Uninstall Chromium
-    package:
-      name: "chromium"
-      state: absent
-      
-  - name: Install games
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - 0ad
-    - frogatto
-    - gnome-games
-    - gnome-mastermind
-    - supertux
-    - supertuxkart
-    - unknown-horizons
-    - warzone2100
-    
-  - name: Install VirtualBox (requires Fasttrack repo)
-    package:
-      name: "{{item}}"
-      state: latest
-    with_items:
-    - virtualbox
-    - virtualbox-guest-additions-iso
-    
+
+
   - name: Enable Flathub repo for flatpaks
     flatpak_remote:
       name: flathub
@@ -160,28 +112,28 @@
       method: system
       state: present
 
-  - name: Install flatpak apps
+  - name: Install flatpaks
     flatpak:
       name: "{{item}}"
       method: system
       state: present
     with_items:
-    - com.github.tchx84.Flatseal
-    - com.microsoft.Teams
-    - com.prusa3d.PrusaSlicer
-    - org.jitsi.jitsi-meet
-    - org.zotero.Zotero
-    - us.zoom.Zoom
+      - com.github.tchx84.Flatseal
+      - com.microsoft.Teams
+      - org.jitsi.jitsi-meet
+      - org.zotero.Zotero
+      - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
-  - name: Uninstall Firefox flatpak and dependencies
+  - name: Uninstall flatpaks
     flatpak:
       name: "{{item}}"
       method: system
       state: absent
     with_items:
-    - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
-    - org.mozilla.firefox
+      - com.prusa3d.PrusaSlicer
+      - org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+      - org.mozilla.firefox
     when: ansible_architecture == "x86_64"
       
   - name: Install upstream youtube-dl
@@ -190,5 +142,4 @@
       state: latest
    
   - name: Enable Adwaita theme for QT applications
-    shell: echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
-   
+    shell: echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment 
