@@ -55,6 +55,7 @@
       - gcu-bin
       - ghostwriter
       - gimp
+      - gnome-core
       - gnome-games
       - gnome-mastermind
       - gnome-shell-extension-caffeine
