@@ -131,6 +131,7 @@
     with_items:
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
+      - io.freetubeapp.FreeTube
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - us.zoom.Zoom
