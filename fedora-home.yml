@@ -1,11 +1,12 @@
-- hosts: "localhost"
+- hosts: localhost
   become: true
   pre_tasks:
-  - name: "Add RPMFusion repositories"
+  - name: Add packages
     dnf:
       name: 
-        - "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
-        - "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
-      state: "latest"
+        - mozilla-https-everywhere
+        - mozilla-privacy-badger
+        - mozilla-ublock-origin
+      state: latest
       autoremove: yes
       update_cache: yes
