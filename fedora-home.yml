@@ -8,5 +8,4 @@
         - mozilla-privacy-badger
         - mozilla-ublock-origin
       state: latest
-      autoremove: yes
       update_cache: yes
