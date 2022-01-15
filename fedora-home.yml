@@ -1,48 +1,56 @@
 - hosts: localhost
   become: true
   pre_tasks:
-  - name: Install packages
-    dnf:
-      name: 
-        - 0ad
-        - apostrophe
-        - audacity
-        - brasero
-        - clamtk
-        - evolution-ews
-        - ffmpeg
-        - filezilla
-        - firefox
-        - freecad
-        - frogatto
-        - gimp
-        - gnome-chemistry-utils
-        - gnome-subtitles
-        - gnome-tweak-tool
-        - homebank
-        - ibus-libpinyin
-        - imagej
-        - inkscape
-        - keepassxc
-        - lame
-        - lyx
-        - mkvtoolnix-gui
-        - mozilla-https-everywhere
-        - mozilla-privacy-badger
-        - mozilla-ublock-origin
-        - mscore
-        - nextcloud-client
-        - pandoc
-        - pdfarranger
-        - pitivi
-        - pronterface
-        - prusa-slicer
-        - puddletag
-        - remmina
-        - rhythmbox-alternative-toolbar
-        - soundconverter
-        - supertux
-        - supertuxkart
-        - youtube-dl
-      state: latest
-      update_cache: yes
+    - name: Enable RPMFusion repos
+      dnf:
+        name:
+          - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+          - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+        state: latest
+        update_cache: yes
+  tasks:
+    - name: Install packages
+      dnf:  
+        name: 
+          - 0ad
+          - apostrophe
+          - audacity
+          - brasero
+          - clamtk
+          - evolution-ews
+          - ffmpeg
+          - filezilla
+          - firefox
+          - freecad
+          - frogatto
+          - gimp
+          - gnome-chemistry-utils
+          - gnome-subtitles
+          - gnome-tweak-tool
+          - homebank
+          - ibus-libpinyin
+          - imagej
+          - inkscape
+          - keepassxc
+          - lame
+          - lyx
+          - mkvtoolnix-gui
+          - mozilla-https-everywhere
+          - mozilla-privacy-badger
+          - mozilla-ublock-origin
+          - mscore
+          - nextcloud-client
+          - pandoc
+          - pdfarranger
+          - pitivi
+          - pronterface
+          - prusa-slicer
+          - puddletag
+          - remmina
+          - rhythmbox-alternative-toolbar
+          - soundconverter
+          - supertux
+          - supertuxkart
+          - youtube-dl
+        state: latest
+        update_cache: yes
