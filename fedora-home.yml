@@ -18,6 +18,7 @@
         - gimp
         - gnome-chemistry-utils
         - gnome-subtitles
+        - gnome-tweak-tool
         - homebank
         - ibus-libpinyin
         - imagej
@@ -43,5 +44,6 @@
         - supertux
         - supertuxkart
         - youtube-dl
+        - VirtualBox
       state: latest
       update_cache: yes
