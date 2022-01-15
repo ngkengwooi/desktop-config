@@ -1,11 +1,47 @@
 - hosts: localhost
   become: true
   pre_tasks:
-  - name: Add packages
+  - name: Install packages
     dnf:
       name: 
+        - 0ad
+        - apostrophe
+        - audacity
+        - brasero
+        - clamtk
+        - evolution-ews
+        - ffmpeg
+        - filezilla
+        - firefox
+        - freecad
+        - frogatto
+        - gimp
+        - gnome-chemistry-utils
+        - gnome-subtitles
+        - homebank
+        - ibus-libpinyin
+        - imagej
+        - inkscape
+        - keepassxc
+        - lame
+        - lyx
+        - mkvtoolnix-gui
         - mozilla-https-everywhere
         - mozilla-privacy-badger
         - mozilla-ublock-origin
+        - mscore
+        - nextcloud-client
+        - pandoc
+        - pdfarranger
+        - pitivi
+        - pronterface
+        - prusa-slicer
+        - puddletag
+        - remmina
+        - rhythmbox-alternative-toolbar
+        - soundconverter
+        - supertux
+        - supertuxkart
+        - youtube-dl
       state: latest
       update_cache: yes
