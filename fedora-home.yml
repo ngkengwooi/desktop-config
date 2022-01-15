@@ -44,6 +44,5 @@
         - supertux
         - supertuxkart
         - youtube-dl
-        - VirtualBox
       state: latest
       update_cache: yes
