@@ -31,15 +31,16 @@ if [ "$EUID" == 0 ]; then
   ###############################
   apt-get -yy install git wget curl
   apt-get -yy install flatpak gnome-software-plugin-flatpak unattended-upgrades
+  apt-get -yy install ibus-libpinyin
   apt-get -yy install pdfarranger pandoc ghostwriter
   apt-get -yy install gimp inkscape imagej
   apt-get -yy install freecad prusa-slicer pronterface
-  apt-get -yy install homebank keepassxc
+  apt-get -yy install homebank keepassxc nextcloud-desktop
   apt-get -yy install gcu-bin gchempaint
   apt-get -yy install gnome-shell-extension-caffeine
   apt-get -yy install rhythmbox-plugin-alternative-toolbar
   apt-get -yy install webext-ublock-origin-firefox webext-https-everywhere webext-privacy-badger
-  apt-get -yy install lame ffmpeg audacity puddletag soundconverter sound-juicer
+  apt-get -yy install lame ffmpeg audacity puddletag soundconverter sound-juicer musescore3
   apt-get -yy install pitivi mkvtoolnix-gui handbrake gnome-subtitles simplescreenrecorder brasero
   apt-get -yy install gnome-games gnome-mastermind frogatto 0ad unknown horizons supertux supertuxkart warzone2100
   apt-get -yy install lyx texlive
@@ -50,7 +51,7 @@ if [ "$EUID" == 0 ]; then
   # Install flatpaks #
   ####################
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-  flatpak -y install \
+  flatpak -y install flathub \
     com.microsoft.Teams \
     org.zotero.Zotero \
     us.zoom.Zoom
