@@ -51,9 +51,9 @@ if [ "$EUID" == 0 ]; then
   ####################
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   flatpak -y install \
-    org.mozilla.firefox \
+    com.microsoft.Teams \
     org.zotero.Zotero \
-    org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+    us.zoom.Zoom
  
   ##############################
   # Make QT apps use GTK theme #
