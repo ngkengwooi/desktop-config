@@ -1,19 +1,17 @@
 #!/bin/bash -e
 
-echo "[Setup] Started."
-
 if [ "$EUID" == 0 ]; then
-  echo "User is root."
-  
-  echo "Update repositories."
-  
+
+  ###################
+  # Configure repos #
+  ###################
   echo "deb https://deb.debian.org/debian/ bullseye main non-free contrib" > /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
   
   ######################
-  # Add Fasttrack repo #
+  # Add fasttrack repo #
   ######################
   apt-get -qq update
   apt-get -yy install fasttrack-archive-keyring
