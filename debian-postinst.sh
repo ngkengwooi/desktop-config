@@ -27,27 +27,66 @@ if [ "$EUID" == 0 ]; then
   ###############################
   # Install additional packages #
   ###############################
-  apt-get -yy install git wget curl filezilla
-  apt-get -yy install flatpak gnome-software-plugin-flatpak unattended-upgrades
-  apt-get -yy install ibus-libpinyin
-  apt-get -yy install pdfarranger pandoc ghostwriter
-  apt-get -yy install gimp inkscape imagej
-  apt-get -yy install freecad prusa-slicer pronterface
-  apt-get -yy install homebank keepassxc nextcloud-desktop
-  apt-get -yy install gcu-bin gchempaint
-  apt-get -yy install gnome-shell-extension-caffeine
-  apt-get -yy install rhythmbox-plugin-alternative-toolbar
-  apt-get -yy install webext-ublock-origin-firefox webext-https-everywhere webext-privacy-badger
-  apt-get -yy install lame ffmpeg audacity puddletag soundconverter sound-juicer musescore3
-  apt-get -yy install pitivi mkvtoolnix-gui handbrake gnome-subtitles simplescreenrecorder brasero
-  apt-get -yy install gnome-games gnome-mastermind frogatto 0ad unknown horizons supertux supertuxkart warzone2100
-  apt-get -yy install lyx texlive
-  apt-get -yy install evolution evolution-ews
-  apt-get -yy install virtualbox virtualbox-guest-additions-iso remmina
-  
+  apt-get -yy install \
+    0ad \
+    audacity \
+    brasero \
+    curl \
+    evolution-ews \
+    ffmpeg \
+    filezilla \
+    freecad \
+    frogatto \
+    gchempaint \
+    gcu-bin \
+    ghostwriter \
+    gimp \
+    git \
+    gnome-games \
+    gnome-mastermind \
+    gnome-shell-extension-caffeine \
+    gnome-subtitles \
+    handbrake \
+    homebank \
+    ibus-libpinyin \
+    imagej \
+    inkscape \
+    keepassxc \
+    lame \
+    lyx \
+    mkvtoolnix-gui \
+    musescore3 \
+    nextcloud-desktop \
+    pandoc \
+    pdfarranger \
+    pitivi \
+    pronterface \
+    prusa-slicer \
+    puddletag \
+    remmina \
+    rhythmbox-plugin-alternative-toolbar \
+    simplescreenrecorder \
+    soundconverter \
+    sound-juicer \
+    supertux \
+    supertuxkart \ 
+    texlive \
+    unattended-upgrades \
+    unknown-horizons \
+    virtualbox \
+    virtualbox-guest-additions-iso \
+    warzone2100 \
+    webext-https-everywhere \
+    webext-privacy-badger \
+    webext-ublock-origin-firefox \
+    wget
+ 
   ####################
   # Install flatpaks #
   ####################
+  apt-get -yy install \
+    flatpak \
+    gnome-software-plugin-flatpak
   flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
   flatpak -y install flathub \
     com.microsoft.Teams \
