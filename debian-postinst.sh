@@ -90,7 +90,7 @@ if [ "$EUID" == 0 ]; then
     adwaita-qt \
     qt5-gtk-platformtheme \
     qt5-style-plugins
-  echo "QT_QPA_PLATFORMTHEME='gnome'"
+  echo "QT_QPA_PLATFORMTHEME='gnome'" > /etc/environment
   
   # Configure the GRUB bootloader.
   sed -i "s/quiet/quiet splash/" /etc/default/grub
