@@ -29,7 +29,7 @@ if [ "$EUID" == 0 ]; then
   ###############################
   # Install additional packages #
   ###############################
-  apt-get -yy install git wget curl
+  apt-get -yy install git wget curl filezilla
   apt-get -yy install flatpak gnome-software-plugin-flatpak unattended-upgrades
   apt-get -yy install ibus-libpinyin
   apt-get -yy install pdfarranger pandoc ghostwriter
