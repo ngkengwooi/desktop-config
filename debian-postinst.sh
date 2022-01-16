@@ -25,6 +25,7 @@ if [ "$EUID" == 0 ]; then
     0ad \
     audacity \
     brasero \
+    clamtk \
     curl \
     evolution-ews \
     ffmpeg \
