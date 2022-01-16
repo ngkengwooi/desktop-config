@@ -5,28 +5,26 @@ if [ "$EUID" == 0 ]; then
   ###################
   # Configure repos #
   ###################
-  echo "deb https://deb.debian.org/debian/ bullseye main non-free contrib" > /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
   
-  ######################
-  # Add fasttrack repo #
-  ######################
+  # By default, the bullseye, bullseye-updates and bullseye-security repos are enabled.
+  # Just need to change the HTTP protocol to HTTPS.
+  sed -i "s/deb http\:/deb https\:/" /etc/apt/sources.list
+  
+  # Add the backports repo.
+  apt-add-repository "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free"
+  
+  # Add the fasttrack repo, needed for VirtualBox.
   apt-get -qq update
   apt-get -yy install fasttrack-archive-keyring
   apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib"
   apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib"
   
-  ############################
-  # Update existing packages #
-  ############################
+  # Upgrade existing packages.
+  # Update repos first since new repos have been added.
   apt-get -qq update
   apt-get -yy dist-upgrade
   
-  ###############################
-  # Install additional packages #
-  ###############################
+  # Install additional packages.
   apt-get -yy install \
     0ad \
     audacity \
@@ -81,9 +79,7 @@ if [ "$EUID" == 0 ]; then
     webext-ublock-origin-firefox \
     wget
  
-  ####################
-  # Install flatpaks #
-  ####################
+  # Install flatpaks.
   apt-get -yy install \
     flatpak \
     gnome-software-plugin-flatpak
@@ -93,19 +89,15 @@ if [ "$EUID" == 0 ]; then
     org.zotero.Zotero \
     us.zoom.Zoom
  
-  ##############################
-  # Make QT apps use GTK theme #
-  ##############################
+  # Make QT apps use GTK theme.
   apt-get -yy install \
     adwaita-qt \
-    qt5-style-plugins \
-    qt5-gtk-platformtheme
+    qt5-gtk-platformtheme \
+    qt5-style-plugins
   echo "QT_QPA_PLATFORMTHEME='gnome'"
   
-  #############################
-  # Configure GRUB bootloader #
-  #############################
-  sed -i 's/quiet/quiet splash/' /etc/default/grub
+  # Configure the GRUB bootloader.
+  sed -i "s/quiet/quiet splash/" /etc/default/grub
   update-grub2
   
 else
