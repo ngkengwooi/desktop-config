@@ -97,6 +97,9 @@ if [ $EUID -eq 0 ]; then
   sed -i "s/quiet/quiet splash/" /etc/default/grub
   update-grub2
   
+  # Upgrade Python installer and other apps.
+  python3 -m pip install --upgrade pip youtube-dl
+  
 else
   echo "Aborted, user is not root."
   exit 1
