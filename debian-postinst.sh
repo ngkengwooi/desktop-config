@@ -95,6 +95,7 @@ if [ $EUID -eq 0 ]; then
   echo "QT_QPA_PLATFORMTHEME='gnome'" > /etc/environment
   
   # Configure the GRUB bootloader.
+  set -i "s/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/" /etc/default/grub
   sed -i "s/quiet/quiet splash/" /etc/default/grub
   update-grub2
   
