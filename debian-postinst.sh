@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-if [ "$EUID" == 0 ]; then
+if [ "$EUID" -eq 0 ]; then
   
   # By default, the bullseye, bullseye-updates and bullseye-security repos are enabled.
   # Just need to change the HTTP protocol to HTTPS.
