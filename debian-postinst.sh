@@ -45,7 +45,7 @@ if [ "$EUID" == 0 ]; then
   apt-get -yy install gnome-games gnome-mastermind frogatto 0ad unknown horizons supertux supertuxkart warzone2100
   apt-get -yy install lyx texlive
   apt-get -yy install evolution evolution-ews
-  apt-get -yy install virtualbox virtualbox-guest-additions-iso
+  apt-get -yy install virtualbox virtualbox-guest-additions-iso remmina
   
   ####################
   # Install flatpaks #
