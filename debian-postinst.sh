@@ -49,7 +49,26 @@ if [ "$EUID" == 0 ]; then
   ####################
   # Install flatpaks #
   ####################
+  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  flatpak -y install \
+    org.mozilla.firefox \
+    org.zotero.Zotero \
+    org.freedesktop.Platform.ffmpeg-full/x86_64/21.08
+ 
+  ##############################
+  # Make QT apps use GTK theme #
+  ##############################
+  apt-get -yy install \
+    adwaita-qt \
+    qt5-style-plugins \
+    qt5-gtk-platformtheme
+  echo "QT_QPA_PLATFORMTHEME='gnome'"
   
+  #############################
+  # Configure GRUB bootloader #
+  #############################
+  sed -i 's/quiet/quiet splash/' /etc/default/grub
+  update-grub2
   
 else
   echo "Aborted, user is not root."
