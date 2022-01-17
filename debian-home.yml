@@ -70,7 +70,8 @@
 
   - name: Install flatpaks
     flatpak:
-      name:
+      name: "{{item}}"
+      with_items:      
         - com.github.tchx84.Flatseal
         - com.microsoft.Teams
         - org.zotero.Zotero
