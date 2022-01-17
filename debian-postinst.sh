@@ -4,8 +4,9 @@ if [ $EUID -eq 0 ]; then
   
   # By default, the bullseye, bullseye-updates and bullseye-security repos are enabled.
   # Just need to change the HTTP protocol to HTTPS and remove comments.
-  sed -i "s/http\:\/\//https\:\/\//" /etc/apt/sources.list
-  sed -i "/^[[:space:]]*$/d" /etc/apt/sources.list
+  sed -i "s/http\:\/\//https\:\/\//" /etc/apt/sources.list # Use HTTPS
+  sed -i "/^[[:space:]]*$/d" /etc/apt/sources.list # Remove blank lines
+  set -i "/^\s*#.*/d" /etc/apt/sources.list # Remove comments
   
   # Add the backports repo.
   apt-add-repository "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free"
