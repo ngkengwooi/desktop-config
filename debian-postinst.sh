@@ -22,60 +22,7 @@ if [ $EUID -eq 0 ]; then
   apt-get -yy dist-upgrade
   
   # Install additional packages.
-  apt-get -yy install \
-    0ad \
-    audacity \
-    brasero \
-    clamtk \
-    curl \
-    evolution-ews \
-    ffmpeg \
-    filezilla \
-    freecad \
-    frogatto \
-    gchempaint \
-    gcu-bin \
-    ghostwriter \
-    gimp \
-    git \
-    gnome-games \
-    gnome-mastermind \
-    gnome-shell-extension-caffeine \
-    gnome-subtitles \
-    handbrake \
-    homebank \
-    ibus-libpinyin \
-    imagej \
-    inkscape \
-    keepassxc \
-    lame \
-    lyx \
-    mkvtoolnix-gui \
-    musescore3 \
-    nextcloud-desktop \
-    pandoc \
-    pdfarranger \
-    pitivi \
-    pronterface \
-    prusa-slicer \
-    puddletag \
-    remmina \
-    rhythmbox-plugin-alternative-toolbar \
-    simplescreenrecorder \
-    soundconverter \
-    sound-juicer \
-    supertux \
-    supertuxkart \ 
-    texlive \
-    unattended-upgrades \
-    unknown-horizons \
-    virtualbox \
-    virtualbox-guest-additions-iso \
-    warzone2100 \
-    webext-https-everywhere \
-    webext-privacy-badger \
-    webext-ublock-origin-firefox \
-    wget
+  apt-get -yy install $(cat packages-install.txt)
  
   # Install flatpaks.
   apt-get -yy install \
