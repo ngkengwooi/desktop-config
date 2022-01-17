@@ -1,5 +1,8 @@
 - hosts: localhost
   become: true
+  vars:
+    package_version:
+      bitwarden: 1.30.0
     
   pre_tasks:
   
@@ -113,7 +116,7 @@
     
   - name: Install Bitwarden desktop client (x86_64)
     apt:
-      deb: https://github.com/bitwarden/desktop/releases/download/v1.30.0/Bitwarden-1.30.0-amd64.deb
+      deb: https://github.com/bitwarden/desktop/releases/download/v{{package_version.bitwarden}}/Bitwarden-{{package_version.bitwarden}}-amd64.deb
     when: ansible_architecture == "x86_64"
 
   - name: Enable Flathub repo for flatpaks
