@@ -23,7 +23,7 @@ if [ $EUID -eq 0 ]; then
   apt-get -yy dist-upgrade
   
   # Install additional packages.
-  apt-get -yy install $(cat packages-install.txt)
+  apt-get -yy install $(cat debian-install.txt)
  
   # Install flatpaks.
   apt-get -yy install \
