@@ -71,13 +71,13 @@
   - name: Install flatpaks
     flatpak:
       name: "{{item}}"
-      with_items:      
-        - com.github.tchx84.Flatseal
-        - com.microsoft.Teams
-        - org.zotero.Zotero
-        - us.zoom.Zoom
       method: system
       state: present
+    with_items:      
+      - com.github.tchx84.Flatseal
+      - com.microsoft.Teams
+      - org.zotero.Zotero
+      - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
   - name: Update Python modules
