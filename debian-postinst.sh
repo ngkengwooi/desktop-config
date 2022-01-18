@@ -31,8 +31,8 @@ if [ $EUID -eq 0 ]; then
   #############################
   # Configure GRUB bootloader #
   #############################
-  sed -i 's/GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=0/' /etc/default/grub
-  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
+  sed -i 's/GRUB_TIMEOUT\=\d+/GRUB_TIMEOUT\=0/' /etc/default/grub
+  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT\="[^"]+"/GRUB_CMDLINE_LINUX_DEFAULT\="splash quiet"/' /etc/default/grub
   update-grub2
   
   ###############################
