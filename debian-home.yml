@@ -63,6 +63,7 @@
         - soundconverter
         - supertux
         - supertuxkart
+        - synaptic
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unknown-horizons
@@ -80,13 +81,13 @@
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
       state: present
-
+      
   - name: Install flatpaks
     flatpak:
       name: "{{item}}"
       method: system
       state: present
-    with_items:      
+    with_items:
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
       - edu.mit.Scratch
