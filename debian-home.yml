@@ -14,6 +14,7 @@
         - ffmpeg
         - filezilla
         - firefox-esr
+        - firmware-linux-nonfree
         - flatpak
         - freecad
         - frogatto
@@ -51,6 +52,7 @@
         - soundconverter
         - supertux
         - supertuxkart
+        - ttf-mscorefonts-installer
         - unattended-upgrades
         - unknown-horizons
         - virtualbox
