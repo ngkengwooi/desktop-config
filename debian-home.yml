@@ -100,3 +100,9 @@
         - pip
         - youtube-dl
       state: latest
+      
+  - name: Schedule maintenance
+    cron:
+      name: "ansible-pull config"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-home.yml"
+      minute: "0"
