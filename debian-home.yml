@@ -1,7 +1,14 @@
 - hosts: localhost
   become: true
-  tasks:
-  - name: Install packages via APT
+  tasks: 
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
     package:
       name:
         - 0ad
