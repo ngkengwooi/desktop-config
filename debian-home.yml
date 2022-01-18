@@ -37,6 +37,7 @@
         - mkvtoolnix-gui
         - musescore3
         - nextcloud-desktop
+        - openssh-server
         - pandoc
         - pdfarranger
         - python3-pip
@@ -50,6 +51,7 @@
         - r-cran-rcmdr
         - remmina
         - rhythmbox-plugin-alternative-toolbar
+        - scratch
         - simplescreenrecorder
         - soundconverter
         - supertux
