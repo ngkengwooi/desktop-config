@@ -26,13 +26,13 @@ if [ $EUID -eq 0 ]; then
   ################################
   # Enable GTK theme for QT apps #
   ################################
-  echo "QT_QPA_PLATFORMTHEME='gnome'" > /etc/environment
+  echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
   
   #############################
   # Configure GRUB bootloader #
   #############################
-  sed -i 's/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/' /etc/default/grub
-  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="[^"]+"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
+  sed -i 's/GRUB_TIMEOUT.+/GRUB_TIMEOUT=0/' /etc/default/grub
+  sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT.+/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub2
   
   ###############################
