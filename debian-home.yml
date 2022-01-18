@@ -63,7 +63,6 @@
         - soundconverter
         - supertux
         - supertuxkart
-        - synaptic
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unknown-horizons
@@ -74,6 +73,15 @@
         - webext-privacy-badger
         - webext-ublock-origin-firefox
       state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:
+        - chromium
+        - epiphany-browser
+        - synaptic
+      state: absent
+      
     
   - name: Enable FlatHub
     flatpak_remote:
