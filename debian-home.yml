@@ -58,7 +58,6 @@
         - r-cran-rcmdr
         - remmina
         - rhythmbox-plugin-alternative-toolbar
-        - scratch
         - simplescreenrecorder
         - soundconverter
         - supertux
@@ -89,6 +88,7 @@
     with_items:      
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
+      - edu.mit.Scratch
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - us.zoom.Zoom
