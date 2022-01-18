@@ -82,6 +82,7 @@
     with_items:      
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
+      - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
