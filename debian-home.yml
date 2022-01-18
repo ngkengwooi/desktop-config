@@ -81,8 +81,7 @@
         - chromium
         - epiphany-browser
         - synaptic
-      state: absent
-      
+      state: absent      
     
   - name: Enable FlatHub
     flatpak_remote:
