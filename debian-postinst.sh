@@ -33,7 +33,7 @@ if [ $EUID -eq 0 ]; then
   #############################
   sed -i 's/GRUB_TIMEOUT.+/GRUB_TIMEOUT=0/' /etc/default/grub
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT.+/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
-  update-grub2
+  update-grub
   
   ###############################
   # Hand over config to ansible #
