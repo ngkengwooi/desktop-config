@@ -99,6 +99,7 @@
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
       - edu.mit.Scratch
+      - io.freetubeapp.FreeTube
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - us.zoom.Zoom
