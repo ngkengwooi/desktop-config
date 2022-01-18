@@ -46,6 +46,8 @@
         - puddletag
         - qt5-gtk-platformtheme
         - qt5-style-plugins
+        - r-base
+        - r-cran-rcmdr
         - remmina
         - rhythmbox-plugin-alternative-toolbar
         - simplescreenrecorder
