@@ -1,0 +1,128 @@
+- hosts: localhost
+  become: true
+  tasks:   
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes    
+  - name: Install packages
+    package:
+      name:
+        - adwaita-qt
+        - blender
+        - clamtk
+        - evolution-ews
+        - ffmpeg
+        - filezilla
+        - firefox-esr
+        - firmware-linux-nonfree
+        - flatpak
+        - freecad
+        - gchempaint
+        - gcu-bin
+        - ghostwriter
+        - gimp
+        - gnome-shell-extension-caffeine
+        - gnome-software-plugin-flatpak
+        - ibus-libpinyin
+        - imagej
+        - inkscape
+        - keepassxc
+        - lame
+        - lyx
+        - openssh-server
+        - pandoc
+        - pdfarranger
+        - python3-pip
+        - pronterface
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - remmina
+        - rhythmbox-plugin-alternative-toolbar
+        - simplescreenrecorder
+        - ttf-mscorefonts-installer
+        - unattended-upgrades
+        - webext-https-everywhere
+        - webext-privacy-badger
+        - webext-ublock-origin-firefox
+      state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:        
+        - 0ad
+        - chromium
+        - epiphany-browser
+        - frogatto
+        - gnome-mastermind
+        - gnome-subtitles
+        - handbrake
+        - homebank
+        - keepassxc
+        - lame
+        - lyx
+        - mkvtoolnix-gui
+        - nautilus-nextcloud
+        - nextcloud-desktop
+        - pitivi
+        - prusa-slicer
+        - puddletag
+        - r-base
+        - r-cran-rcmdr
+        - soundconverter
+        - sound-juicer
+        - supertux
+        - supertuxkart
+        - torbrowser-launcher
+        - unknown-horizons
+        - virtualbox
+        - virtualbox-guest-additions-iso
+        - warzone2100        
+      state: absent      
+    
+  - name: Enable FlatHub
+    flatpak_remote:
+      name: flathub
+      flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+      method: system
+      state: present
+      
+  - name: Install flatpaks
+    flatpak:
+      name: "{{item}}"
+      method: system
+      state: present
+    with_items:
+      - com.github.tchx84.Flatseal
+      - com.prusa3d.PrusaSlicer
+      - org.zotero.Zotero
+    when: ansible_architecture == "x86_64"
+    
+  - name: Uninstall flatpaks
+    flatpak:
+      name: "{{item}}"
+      method: system
+      state: absent
+    with_items:
+      - com.microsoft.Teams
+      - edu.mit.Scratch
+      - io.freetubeapp.FreeTube
+      - org.jitsi.jitsi-meet
+      - org.mozilla.Firefox
+      - us.zoom.Zoom
+    when: ansible_architecture == "x86_64"
+    
+  - name: Update Python modules
+    pip:
+      name:
+        - pip
+        - youtube-dl
+      state: latest
+      
+  - name: Schedule maintenance
+    cron:
+      name: "Hourly ansible-pull config"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-work.yml"
+      minute: "0"
+      user: root
