@@ -109,7 +109,7 @@
       - edu.mit.Scratch
       - io.freetubeapp.FreeTube
       - org.jitsi.jitsi-meet
-      - org.mozilla.Firefox
+      - org.mozilla.firefox
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
