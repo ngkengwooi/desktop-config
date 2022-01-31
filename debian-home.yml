@@ -110,8 +110,14 @@
     pip:
       name:
         - pip
-        - youtube-dl
+        - yt-dlp
       state: latest
+  
+  - name: Uninstall youtube-dl
+    pip:
+      name:
+        - youtube-dl
+      state: absent
       
   - name: Schedule maintenance
     cron:
