@@ -106,6 +106,7 @@
       - io.freetubeapp.FreeTube
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
+      - uk.co.ibboard.cawbird
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
