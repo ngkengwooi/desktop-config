@@ -13,7 +13,7 @@
   
     - name: Update all packages
       dnf:
-        name: *
+        name: "*"
         state: latest
         update_cache: yes
         autoremove: yes
