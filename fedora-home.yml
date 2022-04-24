@@ -76,6 +76,13 @@
       dnf:
         autoremove: yes
         
+    - name: Enable FlatHub
+      flatpak_remote:
+        name: flathub
+        flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+        method: system
+        state: present
+        
     - name: Install flatpaks
       flatpak:
         name: "{{item}}"
