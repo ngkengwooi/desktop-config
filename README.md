@@ -1,16 +1,10 @@
-# Ansible for Debian Workstations
+# Desktop configurations
 
-Configurations for Debian workstations, managed via Ansible.
+Configuration tools to deploy and manage Fedora and Debian workstations using Ansible.
 
-Usage:
+## Usage
 
-```
-sudo ansible-pull -U https://github.com/ngkengwooi/desktop-config <profile.yml>
-```
-
-## Convenience scripts
-
-The convenience scripts can be used to quickly set up Ansible on a new computer and then use that to pull in the configurations. Simply execute the following commands in the terminal and wait:
+When deploying a workstation for the first time, use the convenience scripts to quickly set up Ansible on a fresh OS install and then use that to pull in the configurations. Simply execute the following commands in the terminal and wait:
 
 Fedora for home:
 
@@ -36,3 +30,5 @@ Debian for work:
 ```
 curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-work.sh | sudo sh
 ```
+
+Once deployed, the workstation will automatically update according to the latest configuration file in this repo every hour.
