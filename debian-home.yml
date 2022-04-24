@@ -100,10 +100,12 @@
       method: system
       state: present
     with_items:
+      - com.bitwarden.desktop
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
       - edu.mit.Scratch
+      - com.tutanota.Tutanota
       - io.freetubeapp.FreeTube
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
