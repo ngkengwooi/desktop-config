@@ -9,26 +9,26 @@ When deploying a workstation for the first time, use the convenience scripts to 
 Fedora for home:
 
 ```
-curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/fedora-home.sh | sudo sh
+curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/fedora-home.sh | sudo bash
 ```
 
 Fedora for work:
 
 ```
-curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/fedora-work.sh | sudo sh
+curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/fedora-work.sh | sudo bash
 ```
 
 Debian for home:
 
 ```
-curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-home.sh | sudo sh
+curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-home.sh | sudo bash
 ```
 
 
 Debian for work:
 
 ```
-curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-work.sh | sudo sh
+curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-work.sh | sudo bash
 ```
 
 Once deployed, the workstation will automatically update according to the latest configuration file in this repo every hour.
