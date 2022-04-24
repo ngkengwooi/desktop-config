@@ -8,25 +8,40 @@
           - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-35.noarch.rpm
         state: latest
         update_cache: yes
+        
   tasks:
+  
+    - name: Update all packages
+      dnf:
+        name: *
+        state: latest
+        update_cache: yes
+        autoremove: yes
+  
     - name: Install packages
       dnf:  
-        name: 
+        name:
           - 0ad
+          - ansible
           - apostrophe
           - audacity
+          - blender
           - brasero
+          - cawbird
           - clamtk
+          - evolution
           - evolution-ews
           - ffmpeg
           - filezilla
           - firefox
+          - foliate
           - freecad
           - frogatto
           - gimp
           - gnome-chemistry-utils
           - gnome-subtitles
           - gnome-tweak-tool
+          - handbrake
           - homebank
           - ibus-libpinyin
           - imagej
@@ -40,6 +55,7 @@
           - mozilla-ublock-origin
           - mscore
           - nextcloud-client
+          - nextcloud-client-nautilus
           - pandoc
           - pdfarranger
           - pitivi
@@ -48,9 +64,33 @@
           - puddletag
           - remmina
           - rhythmbox-alternative-toolbar
+          - scratch
           - soundconverter
           - supertux
           - supertuxkart
-          - youtube-dl
+          - VirtualBox
+          - yt-dlp
         state: latest
         update_cache: yes
+        autoremove: yes
+        
+    - name: Install flatpaks
+      flatpak:
+        name: "{{item}}"
+        method: system
+        state: present
+      with_items:
+        - com.github.tchx84.Flatseal
+        - com.microsoft.Teams
+        - io.freetubeapp.FreeTube
+        - org.jitsi.jitsi-meet
+        - org.zotero.Zotero
+        - us.zoom.Zoom
+      when: ansible_architecture == "x86_64"
+      
+    - name: Schedule maintenance
+      cron:
+        name: "Hourly System Update"
+        job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config fedora-home.yml"
+        minute: "0"
+        user: root
