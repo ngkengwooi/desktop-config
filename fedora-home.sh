@@ -9,7 +9,7 @@ dnf -y install ansible flatpak
 
 # Replace the Fedora-curated flathub repo
 # The flathub.org repo will be added back by Ansible Pull
-flatpak remote-delete flathub
+flatpak remote-delete -y flathub
 
 # Configure system with Ansible:
 ansible-pull -U https://github.com/ngkengwooi/desktop-config fedora-home.yml
