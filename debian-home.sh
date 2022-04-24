@@ -6,7 +6,7 @@
 
 # Install Ansible:
 apt-get update
-apt-get -y install ansible
+apt-get -y install ansible git
 
 # Configure system with Ansible:
 ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-home.yml
