@@ -31,4 +31,4 @@ Debian for work:
 curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-work.sh | sudo bash
 ```
 
-Once deployed, the workstation will automatically update according to the latest configuration file in this repo every hour.
+Once deployed, the workstation will automatically update every hour according to the latest configuration file in this repo.
