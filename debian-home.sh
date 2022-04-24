@@ -5,6 +5,7 @@
 # (Piping to shell because I wrote this script and I trust it)
 
 # Install Ansible:
+apt-get update
 apt-get -y install ansible
 
 # Configure system with Ansible:
