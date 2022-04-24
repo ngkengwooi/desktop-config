@@ -16,7 +16,6 @@
         name: "*"
         state: latest
         update_cache: yes
-        autoremove: yes
   
     - name: Install packages
       dnf:  
@@ -72,6 +71,9 @@
           - yt-dlp
         state: latest
         update_cache: yes
+   
+    - name: Clean up unused packages
+      dnf:
         autoremove: yes
         
     - name: Install flatpaks
