@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # Run this script with root privileges, e.g.
-# curl -sSL https://github.com/ngkengwooi/desktop-config/fedora-home.sh | sudo sh
+# curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/fedora-home.sh | sudo sh
 # (Piping to shell because I wrote this script and I trust it)
 
 # Install Ansible:
