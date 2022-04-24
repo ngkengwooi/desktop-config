@@ -1,4 +1,4 @@
-#!/usr/bin/sh -e
+#!/bin/sh -e
 
 # Run this script with root privileges, e.g.
 # curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-home.sh | sudo sh
