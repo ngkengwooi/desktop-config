@@ -10,7 +10,7 @@ sudo ansible-pull -U https://github.com/ngkengwooi/desktop-config <profile.yml>
 
 ## Convenience scripts
 
-The convenience scripts can be used to quickly set up Ansible on a new computer. Simply execute the following commands in the terminal and wait:
+The convenience scripts can be used to quickly set up Ansible on a new computer and then use that to pull in the configurations. Simply execute the following commands in the terminal and wait:
 
 Fedora for home:
 
