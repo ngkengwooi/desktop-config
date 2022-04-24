@@ -1,4 +1,4 @@
-#!/usr/bin/sh -e
+#!/usr/bin/sh
 
 # Run this script with root privileges, e.g.
 # curl -sSL https://github.com/ngkengwooi/desktop-config/fedora-home.sh | sudo sh
