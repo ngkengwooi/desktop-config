@@ -1,7 +1,7 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 # Run this script with root privileges, e.g.
-# curl -sSL https://github.com/ngkengwooi/desktop-config/fedora-home.sh | sudo sh
+# curl -sSL https://github.com/ngkengwooi/desktop-config/fedora-home.sh | sudo bash
 # (Piping to shell because I wrote this script and I trust it)
 
 # Check that user is root:
