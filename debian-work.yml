@@ -117,7 +117,7 @@
     pip:
       name:
         - pip
-        - youtube-dl
+        - yt-dlp
       state: latest
       
   - name: Schedule maintenance
