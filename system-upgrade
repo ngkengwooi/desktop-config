@@ -6,6 +6,8 @@
 # Save this script as /usr/local/bin/system-upgrade      #
 # and make it executable:                                #
 #   sudo chmod +x /usr/local/bin/system-upgrade          #
+# Invoke as follows:                                     #
+#   sudo system-upgrade                                  #
 ##########################################################
 
 apt-get update
