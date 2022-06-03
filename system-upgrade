@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+##########################################################
+# This script will install all available updates for any #
+# software installed system-wide via APT or Flatpak.     #
+# Save this script as /usr/local/bin/system-upgrade      #
+# and make it executable:                                #
+#   sudo chmod +x /usr/local/bin/system-upgrade          #
+##########################################################
+
+apt-get update
+apt-get -y dist-upgrade
+apt-get -y autoremove --purge
+apt-get -y autoclean
+flatpak -y update
