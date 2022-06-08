@@ -23,6 +23,7 @@
         - firefox-esr
         - firmware-linux-nonfree
         - flatpak
+        - fonts-arphic-*
         - freecad
         - frogatto
         - gchempaint
