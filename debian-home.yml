@@ -57,6 +57,7 @@
         - pronterface
         - prusa-slicer
         - puddletag
+        - qrencode
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - r-base
