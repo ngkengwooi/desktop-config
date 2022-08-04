@@ -16,6 +16,7 @@
         - firmware-b43-installer
         - firmware-linux-nonfree
         - lame
+        - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - ttf-mscorefonts-installer
