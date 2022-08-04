@@ -28,6 +28,7 @@
         - qt5-style-plugins
         - ttf-mscorefonts-installer
         - unattended-upgrades
+        - vlc
         - webext-https-everywhere
         - webext-privacy-badger
         - webext-ublock-origin-firefox
