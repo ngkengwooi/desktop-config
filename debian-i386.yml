@@ -11,6 +11,7 @@
   - name: Install packages
     package:
       name:
+        - adapta-gtk-theme
         - arc-theme
         - ffmpeg
         - firefox-esr
