@@ -18,6 +18,7 @@
         - firmware-linux-nonfree
         - fonts-roboto
         - lame
+        - lightdm-gtk-greeter-settings
         - lxappearance
         - moka-icon-theme
         - network-manager-gnome
