@@ -11,11 +11,13 @@
   - name: Install packages
     package:
       name:
+        - arc-theme
         - ffmpeg
         - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
         - lame
+        - moka-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins
