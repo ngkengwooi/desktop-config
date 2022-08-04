@@ -25,6 +25,7 @@
         - gimp
         - gnome-shell-extension-caffeine
         - gnome-software-plugin-flatpak
+        - grsync
         - ibus-libpinyin
         - imagej
         - inkscape
