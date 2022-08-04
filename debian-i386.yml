@@ -20,7 +20,7 @@
         - lame
         - lxappearance
         - moka-icon-theme
-        - nm-tray
+        - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -40,6 +40,7 @@
         - epiphany-browser
         - lxmusic
         - mpv
+        - nm-tray
         - smplayer
         - synaptic
         - termit
