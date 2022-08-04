@@ -1,0 +1,53 @@
+- hosts: localhost
+  become: true
+  tasks: 
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
+    package:
+      name:
+        - ffmpeg
+        - firefox-esr
+        - firmware-linux-nonfree
+        - lame
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - ttf-mscorefonts-installer
+        - unattended-upgrades
+        - webext-https-everywhere
+        - webext-privacy-badger
+        - webext-ublock-origin-firefox
+      state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:
+        - chromium
+        - epiphany-browser
+        - synaptic
+      state: absent
+    
+  - name: Update Python modules
+    pip:
+      name:
+        - pip
+        - yt-dlp
+      state: latest
+  
+  - name: Uninstall youtube-dl
+    pip:
+      name:
+        - youtube-dl
+      state: absent
+      
+  - name: Schedule maintenance
+    cron:
+      name: "Hourly ansible-pull config"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-i386.yml"
+      minute: "0"
+      user: root
