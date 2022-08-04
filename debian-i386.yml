@@ -46,6 +46,7 @@
         - smplayer
         - synaptic
         - termit
+        - xsane
       state: absent
     
   - name: Update Python modules
