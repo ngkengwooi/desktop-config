@@ -17,6 +17,7 @@
         - firmware-b43-installer
         - firmware-linux-nonfree
         - lame
+        - lxappearance
         - moka-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
