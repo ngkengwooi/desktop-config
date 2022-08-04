@@ -20,6 +20,7 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
+        - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -42,7 +43,6 @@
         - lxmusic
         - moka-icon-theme
         - mpv
-        - network-manager-gnome
         - nm-tray
         - smplayer
         - synaptic
