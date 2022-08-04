@@ -20,6 +20,8 @@
         - lame
         - lxappearance
         - moka-icon-theme
+        - nm-tray
+        - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins
@@ -34,6 +36,7 @@
     package:
       name:
         - chromium
+        - deluge
         - epiphany-browser
         - lxmusic
         - mpv
