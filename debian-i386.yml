@@ -21,7 +21,7 @@
         - lightdm-gtk-greeter-settings
         - lxappearance
         - moka-icon-theme
-        - network-manager-gnome
+        - nm-tray
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -42,7 +42,7 @@
         - epiphany-browser
         - lxmusic
         - mpv
-        - nm-tray
+        - network-manager-gnome
         - smplayer
         - synaptic
         - termit
