@@ -19,9 +19,6 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
-        - lxappearance
-        - moka-icon-theme
-        - nm-tray
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -40,9 +37,12 @@
         - chromium
         - deluge
         - epiphany-browser
+        - lxappearance
         - lxmusic
+        - moka-icon-theme
         - mpv
         - network-manager-gnome
+        - nm-tray
         - smplayer
         - synaptic
         - termit
