@@ -19,6 +19,7 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
+        - moka-icon-theme
         - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
