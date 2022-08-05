@@ -11,7 +11,6 @@
   - name: Install packages
     package:
       name:
-        - adapta-gtk-theme
         - arc-theme
         - ffmpeg
         - firefox-esr
@@ -36,6 +35,7 @@
   - name: Uninstall packages
     package:
       name:
+        - adapta-gtk-theme
         - chromium
         - deluge
         - epiphany-browser
