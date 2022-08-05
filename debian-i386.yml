@@ -19,6 +19,7 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
+        - lxappearance
         - moka-icon-theme
         - network-manager-gnome
         - papirus-icon-theme
@@ -40,7 +41,6 @@
         - chromium
         - deluge
         - epiphany-browser
-        - lxappearance
         - lxmusic
         - moka-icon-theme
         - mpv
