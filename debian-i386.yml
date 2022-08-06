@@ -11,6 +11,7 @@
   - name: Install packages
     package:
       name:
+        - adapta-gtk-theme
         - arc-theme
         - ffmpeg
         - firefox-esr
@@ -19,9 +20,7 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
-        - lxappearance
         - moka-icon-theme
-        - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -37,7 +36,6 @@
   - name: Uninstall packages
     package:
       name:
-        - adapta-gtk-theme
         - chromium
         - deluge
         - epiphany-browser
