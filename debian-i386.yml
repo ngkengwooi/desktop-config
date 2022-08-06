@@ -22,6 +22,7 @@
         - lightdm-gtk-greeter-settings
         - lxappearance
         - moka-icon-theme
+        - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
@@ -38,6 +39,7 @@
     package:
       name:
         - chromium
+        - connman
         - deluge
         - epiphany-browser
         - lxmusic
