@@ -20,6 +20,7 @@
         - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
+        - lxappearance
         - moka-icon-theme
         - papirus-icon-theme
         - python3-pip
