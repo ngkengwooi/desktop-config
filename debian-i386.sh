@@ -13,20 +13,16 @@ if [ $EUID -eq 0 ]; then
   echo "deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
   apt-get -qq update
-  #apt-get -yy install fasttrack-archive-keyring
-  #apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib"
-  #apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib"
   
   #############################
   # Upgrade existing packages #
   #############################
-  #apt-get -qq update
   apt-get -yy dist-upgrade
   
   ################################
   # Enable GTK theme for QT apps #
   ################################
-  # echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
+  echo "QT_QPA_PLATFORMTHEME=gtk2" > /etc/environment
   
   #############################
   # Configure GRUB bootloader #
