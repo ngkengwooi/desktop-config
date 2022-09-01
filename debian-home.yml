@@ -76,6 +76,7 @@
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unknown-horizons
+        - unrar
         - virtualbox
         - virtualbox-guest-additions-iso
         - warzone2100
@@ -113,6 +114,7 @@
       - com.tutanota.Tutanota
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
+      - net.lutris.Lutris
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - uk.co.ibboard.cawbird
