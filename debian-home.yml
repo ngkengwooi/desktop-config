@@ -112,6 +112,7 @@
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
+      - com.usebottles.bottles
       - edu.mit.Scratch
       - com.tutanota.Tutanota
       - io.freetubeapp.FreeTube
