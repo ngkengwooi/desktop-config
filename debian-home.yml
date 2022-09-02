@@ -90,7 +90,9 @@
       name:
         - chromium
         - epiphany-browser
+        - openttd
         - synaptic
+        - vlc
       state: absent      
     
   - name: Enable FlatHub
