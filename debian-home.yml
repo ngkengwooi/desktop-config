@@ -92,6 +92,7 @@
         - epiphany-browser
         - openttd
         - synaptic
+        - termit
         - vlc
       state: absent      
     
