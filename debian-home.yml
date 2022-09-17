@@ -36,6 +36,7 @@
         - gnome-software-plugin-flatpak
         - gnome-subtitles
         - grsync
+        - gufw
         - handbrake
         - homebank
         - ibus-libpinyin
@@ -113,9 +114,10 @@
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.microsoft.Teams
-      - com.usebottles.bottles
-      - edu.mit.Scratch
       - com.tutanota.Tutanota
+      - com.usebottles.bottles
+      - com.valvesoftware.Steam
+      - edu.mit.Scratch
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
       - net.lutris.Lutris
