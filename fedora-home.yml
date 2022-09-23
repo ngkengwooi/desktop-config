@@ -7,8 +7,7 @@
         state: latest
       when: ansible_distribution == 'Fedora'
         
-  tasks:
-  
+  tasks:  
     - name: Update all packages
       dnf:
         name: "*"
