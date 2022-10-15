@@ -75,6 +75,7 @@
         - steam-devices
         - supertux
         - supertuxkart
+        - timekpr-next
         - torbrowser-launcher
         - ttf-mscorefonts-installer
         - unattended-upgrades
@@ -110,6 +111,7 @@
       method: system
       state: present
     with_items:
+      - app.drey.Dialect
       - com.bitwarden.desktop
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
@@ -117,6 +119,7 @@
       - com.tutanota.Tutanota
       - com.usebottles.bottles
       - com.valvesoftware.Steam
+      - de.haeckerfelix.Shortwave
       - edu.mit.Scratch
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
