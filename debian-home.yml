@@ -124,11 +124,19 @@
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
       - net.lutris.Lutris
-      - org.gnome.Boxes
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - uk.co.ibboard.cawbird
       - us.zoom.Zoom
+    when: ansible_architecture == "x86_64"
+  
+  - name: Uninstall flatpaks
+    flatpak:
+      name: "{{item}}"
+      method: system
+      state: absent
+    with_items:
+      - org.gnome.Boxes
     when: ansible_architecture == "x86_64"
     
   - name: Update Python modules
