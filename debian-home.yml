@@ -75,7 +75,6 @@
         - steam-devices
         - supertux
         - supertuxkart
-        - timekpr-next
         - torbrowser-launcher
         - ttf-mscorefonts-installer
         - unattended-upgrades
@@ -95,6 +94,7 @@
         - openttd
         - synaptic
         - termit
+        - timekpr-next
         - vlc
       state: absent      
     
