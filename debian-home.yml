@@ -123,6 +123,7 @@
       - edu.mit.Scratch
       - io.freetubeapp.FreeTube
       - net.lutris.Lutris
+      - org.gnome.Boxes
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
       - uk.co.ibboard.cawbird
@@ -136,7 +137,6 @@
       state: absent
     with_items:
       - io.github.mimbrero.WhatsAppDesktop
-      - org.gnome.Boxes
     when: ansible_architecture == "x86_64"
     
   - name: Update Python modules
