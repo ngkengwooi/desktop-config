@@ -122,7 +122,6 @@
       - de.haeckerfelix.Shortwave
       - edu.mit.Scratch
       - io.freetubeapp.FreeTube
-      - io.github.mimbrero.WhatsAppDesktop
       - net.lutris.Lutris
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
@@ -136,6 +135,7 @@
       method: system
       state: absent
     with_items:
+      - io.github.mimbrero.WhatsAppDesktop
       - org.gnome.Boxes
     when: ansible_architecture == "x86_64"
     
