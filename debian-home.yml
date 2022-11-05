@@ -95,6 +95,7 @@
         - synaptic
         - termit
         - timekpr-next
+        - virtualbox*
         - vlc
       state: absent      
     
