@@ -14,42 +14,36 @@
         - adapta-gtk-theme
         - arc-theme
         - cheese
+        - epiphany-browser
         - ffmpeg
-        - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
-        - fonts-roboto
         - lame
         - lightdm-gtk-greeter-settings
         - lxappearance
         - moka-icon-theme
-        - network-manager-gnome
         - papirus-icon-theme
         - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins
+        - task-lxde-desktop
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - vlc
-        - webext-https-everywhere
-        - webext-privacy-badger
-        - webext-ublock-origin-firefox
       state: latest
       
   - name: Uninstall packages
     package:
       name:
         - chromium
-        - connman
-        - deluge
-        - epiphany-browser
+        - firefox-esr
+        - gnome-core
+        - gnome-shell
         - lxmusic
-        - moka-icon-theme
         - mpv
-        - nm-tray
         - smplayer
         - synaptic
-        - termit
+        - transmission
         - xsane
       state: absent
     
@@ -59,12 +53,6 @@
         - pip
         - yt-dlp
       state: latest
-  
-  - name: Uninstall youtube-dl
-    pip:
-      name:
-        - youtube-dl
-      state: absent
       
   - name: Schedule maintenance
     cron:
