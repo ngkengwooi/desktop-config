@@ -18,6 +18,7 @@
         - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
+        - fonts-roboto
         - gimp
         - imagej
         - inkscape
@@ -29,7 +30,7 @@
         - pronterface
         - python3-pip
         - qt5-gtk-platformtheme
-        - qt5-style-plugins
+        - qt5-style-plugins        
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
