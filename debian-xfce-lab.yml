@@ -1,0 +1,87 @@
+- hosts: localhost
+  become: true
+  tasks:
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
+    package:
+      name:
+        - task-xfce4-desktop
+        - arc-theme
+        - cheese
+        - ffmpeg
+        - firefox-esr
+        - firmware-b43-installer
+        - firmware-linux-nonfree
+        - gimp
+        - imagej
+        - inkscape
+        - lame
+        - lightdm-gtk-greeter-settings
+        - moka-icon-theme
+        - p7zip-full
+        - pdfarranger
+        - pronterface
+        - python3-pip
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - ttf-mscorefonts-installer
+        - unattended-upgrades
+        - unrar
+        - vlc
+        - xfce4-dictionary
+      state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:
+        - adapta-gtk-theme
+        - chromium
+        - deluge
+        - epiphany-browser
+        - evince
+        - file-roller
+        - gdm3
+        - gnome-clocks
+        - gnome-core
+        - gnome-dictionary
+        - gnome-disk-utility
+        - gnome-documents
+        - gnome-games
+        - gnome-maps
+        - gnome-music
+        - gnome-shell
+        - gnome-software
+        - gnome-todo
+        - gnome-weather
+        - lx*
+        - mpv
+        - papirus-icon-theme
+        - smplayer
+        - spice-vdagent
+        - synaptic
+        - task-lxde-desktop
+        - transmission-gtk
+        - uxterm
+        - xsane
+        - xterm
+      state: absent
+    
+  - name: Update Python modules
+    pip:
+      name:
+        - pip
+        - yt-dlp
+      state: latest
+      
+  - name: Schedule maintenance
+    cron:
+      name: "Hourly ansible-pull config"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-i386.yml"
+      minute: "0"
+      user: root
