@@ -45,6 +45,7 @@
         - deluge
         - epiphany-browser
         - evince
+        - exfalso
         - file-roller
         - gdm3
         - gnome-clocks
@@ -62,10 +63,13 @@
         - lx*
         - mpv
         - papirus-icon-theme
+        - parole
+        - quod-libet
         - smplayer
         - spice-vdagent
         - synaptic
         - task-lxde-desktop
+        - termit
         - transmission-gtk
         - uxterm
         - xsane
