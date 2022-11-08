@@ -11,7 +11,7 @@
   - name: Install packages
     package:
       name:
-        - task-xfce4-desktop
+        - task-xfce-desktop
         - arc-theme
         - cheese
         - ffmpeg
@@ -34,7 +34,6 @@
         - unattended-upgrades
         - unrar
         - vlc
-        - xfce4-dictionary
       state: latest
       
   - name: Uninstall packages
