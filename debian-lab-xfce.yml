@@ -28,6 +28,7 @@
         - p7zip-full
         - pdfarranger
         - pronterface
+        - prusa-slicer
         - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins        
