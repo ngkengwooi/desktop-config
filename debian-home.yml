@@ -84,6 +84,7 @@
         - webext-https-everywhere
         - webext-privacy-badger
         - webext-ublock-origin-firefox
+        - wireguard
       state: latest
       
   - name: Uninstall packages
