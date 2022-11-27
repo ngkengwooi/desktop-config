@@ -38,6 +38,7 @@
         - unattended-upgrades
         - unrar
         - vlc
+        - wireguard
       state: latest
       
   - name: Uninstall packages
