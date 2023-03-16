@@ -117,7 +117,6 @@
       - com.bitwarden.desktop
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
-      - com.microsoft.Teams
       - com.tutanota.Tutanota
       - com.usebottles.bottles
       - com.valvesoftware.Steam
@@ -128,7 +127,6 @@
       - org.gnome.Boxes
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
-      - uk.co.ibboard.cawbird
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
   
@@ -137,8 +135,10 @@
       name: "{{item}}"
       method: system
       state: absent
-    with_items:
-      - io.github.mimbrero.WhatsAppDesktop
+    with_items:      
+      - com.microsoft.Teams
+      - io.github.mimbrero.WhatsAppDesktop      
+      - uk.co.ibboard.cawbird
     when: ansible_architecture == "x86_64"
     
   - name: Update Python modules
