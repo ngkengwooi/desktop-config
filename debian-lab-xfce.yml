@@ -13,24 +13,17 @@
       name:
         - task-xfce-desktop
         - arc-theme
-        - cheese
         - ffmpeg
         - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
+        - fonts-cantarell
         - fonts-roboto
-        - freecad
-        - gimp
-        - grub-customizer
+        - ibus-libpinyin
         - imagej
-        - inkscape
         - lame
         - lightdm-gtk-greeter-settings
-        - moka-icon-theme
         - p7zip-full
-        - pdfarranger
-        - pronterface
-        - prusa-slicer
         - python3-pip
         - qt5-gtk-platformtheme
         - qt5-style-plugins        
@@ -38,19 +31,20 @@
         - unattended-upgrades
         - unrar
         - vlc
-        - wireguard
       state: latest
       
   - name: Uninstall packages
     package:
       name:
         - adapta-gtk-theme
+        - anthy
         - chromium
+        - debian-reference
         - deluge
         - epiphany-browser
         - evince
         - exfalso
-        - file-roller
+        - fcitx*
         - gdm3
         - gnome-clocks
         - gnome-core
@@ -58,17 +52,22 @@
         - gnome-disk-utility
         - gnome-documents
         - gnome-games
+        - gnome-icon-theme
         - gnome-maps
         - gnome-music
         - gnome-shell
         - gnome-software
         - gnome-todo
         - gnome-weather
-        - lx*
+        - goldendict
+        - mlterm
+        - mozc*
+        - moka-icon-theme
         - mpv
         - papirus-icon-theme
         - parole
         - quod-libet
+        - ristretto
         - smplayer
         - spice-vdagent
         - synaptic
@@ -76,6 +75,7 @@
         - termit
         - transmission-gtk
         - uxterm
+        - xfburn
         - xsane
         - xterm
       state: absent
