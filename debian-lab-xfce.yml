@@ -31,15 +31,17 @@
         - unattended-upgrades
         - unrar
         - vlc
+        - webext-privacy-badger
+        - webext-ublock-origin-*
       state: latest
       
   - name: Uninstall packages
     package:
       name:
         - adapta-gtk-theme
-        - anthy
+        - anthy*
         - chromium
-        - debian-reference
+        - debian-reference*
         - deluge
         - epiphany-browser
         - evince
@@ -60,7 +62,7 @@
         - gnome-todo
         - gnome-weather
         - goldendict
-        - mlterm
+        - mlterm*
         - mozc*
         - moka-icon-theme
         - mpv
@@ -76,6 +78,7 @@
         - transmission-gtk
         - uxterm
         - xfburn
+        - xiterm*
         - xsane
         - xterm
       state: absent
