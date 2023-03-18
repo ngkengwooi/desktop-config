@@ -17,6 +17,7 @@
         - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
+        - flatpak
         - fonts-cantarell
         - fonts-roboto
         - ibus-libpinyin
@@ -82,6 +83,13 @@
         - xsane
         - xterm
       state: absent
+      
+  - name: Enable FlatHub
+    flatpak_remote:
+      name: flathub
+      flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+      method: system
+      state: present
     
   - name: Update Python modules
     pip:
