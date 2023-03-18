@@ -102,7 +102,7 @@
     get_url:
       url: https://github.com/ngkengwooi/desktop-config/raw/main/system-upgrade
       dest: /usr/local/bin/system-upgrade
-      mode: 0750
+      mode: 0754
       
   - name: Schedule maintenance
     cron:
