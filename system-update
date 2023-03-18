@@ -1,0 +1,8 @@
+#!/bin/bash -e
+apt-get update
+apt-get -y dist-upgrade
+apt-get -y autoremove --purge
+apt-get -y autoclean
+flatpak -y update
+flatpak -y uninstall --unused
+python3 -m pip install -U pip yt-dlp
