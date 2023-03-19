@@ -33,6 +33,11 @@ if [ $EUID -eq 0 ]; then
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub2
   
+  #################################
+  # Make home directories private #
+  #################################
+  sed -i 's/DIR_MODE=[0-9]+/DIR_MODE=0700/' /etc/adduser.conf
+  
   ###############################
   # Hand over config to ansible #
   ###############################
