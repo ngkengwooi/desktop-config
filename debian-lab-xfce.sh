@@ -36,7 +36,8 @@ if [ $EUID -eq 0 ]; then
   #################################
   # Make home directories private #
   #################################
-  sed -i 's/DIR_MODE=[0-9]+/DIR_MODE=0700/' /etc/adduser.conf
+  chmod 0700 /home/*/
+  sed -Ei 's/DIR_MODE=[0-9]+/DIR_MODE=0700/' /etc/adduser.conf
   
   ###############################
   # Hand over config to ansible #
