@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+CODENAME=bullseye
+
 ########################
 # Check root privilege #
 ########################
@@ -8,14 +10,16 @@ if [ $EUID -eq 0 ]; then
   ################
   # Set up repos #
   ################
-  echo "deb https://deb.debian.org/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free" > /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free" >> /etc/apt/sources.list
   apt-get -qq update
-  apt-get -yy install fasttrack-archive-keyring
-  apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib"
-  apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib"
+  
+  # Disable fasttrack repos
+  #apt-get -yy install fasttrack-archive-keyring
+  #apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ $CODENAME-fasttrack main contrib"
+  #apt-add-repository "deb https://fasttrack.debian.net/debian-fasttrack/ $CODENAME-backports-staging main contrib"
   
   #############################
   # Upgrade existing packages #
@@ -39,7 +43,7 @@ if [ $EUID -eq 0 ]; then
   # Hand over config to ansible #
   ###############################
   apt-get -yy install ansible git
-  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-work.yml
+  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-gnome.yml
   
 else
   echo "Please execute this script as root."
