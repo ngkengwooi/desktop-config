@@ -8,7 +8,7 @@ if [ $EUID -eq 0 ]; then
   ################
   # Set up repos #
   ################
-  echo "deb https://deb.debian.org/debian/ bullseye main non-free contrib" > /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ bullseye-updates main contrib non-free" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian-security/ bullseye-security main contrib non-free" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
@@ -31,7 +31,7 @@ if [ $EUID -eq 0 ]; then
   #############################
   # Configure GRUB bootloader #
   #############################
-  sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/' /etc/default/grub
+  sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=3/' /etc/default/grub
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub
   
