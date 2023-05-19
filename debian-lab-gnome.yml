@@ -87,6 +87,6 @@
   - name: Schedule maintenance
     cron:
       name: "Hourly ansible-pull config"
-      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-work.yml"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-gnome.yml"
       minute: "0"
       user: root
