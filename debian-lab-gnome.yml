@@ -38,7 +38,6 @@
         - rhythmbox-plugin-alternative-toolbar
         - ttf-mscorefonts-installer
         - unattended-upgrades
-        - webext-https-everywhere
         - webext-ublock-origin
       state: latest
       
@@ -48,6 +47,7 @@
         - frogatto
         - gnome-games
         - prusa-slicer # Install flatpak version instead
+        - webext-https-everywhere # No longer needed, now shipped with Firefox
       state: absent    
     
   - name: Enable FlatHub
