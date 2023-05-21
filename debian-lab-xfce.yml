@@ -32,7 +32,6 @@
         - unattended-upgrades
         - unrar
         - vlc
-        - webext-privacy-badger
         - webext-ublock-origin-*
       state: latest
       
@@ -77,6 +76,7 @@
         - termit
         - transmission-gtk
         - uxterm
+        - webext-privacy-badger
         - xfburn
         - xiterm*
         - xsane
