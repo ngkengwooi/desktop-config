@@ -23,7 +23,6 @@
         - firefox-esr
         - firmware-linux-nonfree
         - flatpak
-        - fonts-arphic-*
         - freecad
         - frogatto
         - gchempaint
@@ -78,11 +77,7 @@
         - torbrowser-launcher
         - ttf-mscorefonts-installer
         - unattended-upgrades
-        - unknown-horizons
         - unrar
-        - warzone2100
-        - webext-https-everywhere
-        - webext-privacy-badger
         - webext-ublock-origin-firefox
         - wireguard
       state: latest
@@ -92,12 +87,17 @@
       name:
         - chromium
         - epiphany-browser
+        - fonts-arphic-*
         - openttd
         - synaptic
         - termit
         - timekpr-next
+        - unknown-horizons
         - virtualbox*
         - vlc
+        - warzone2100
+        - webext-https-everywhere # Deprecated
+        - webext-privacy-badger
       state: absent      
     
   - name: Enable FlatHub
