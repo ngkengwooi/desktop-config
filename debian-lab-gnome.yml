@@ -44,9 +44,12 @@
   - name: Uninstall packages
     package:
       name:
+        - chromium
         - frogatto
         - gnome-games
+        - gnome-software
         - prusa-slicer # Install flatpak version instead
+        - synaptic
         - webext-https-everywhere # No longer needed, now shipped with Firefox
       state: absent    
     
