@@ -77,12 +77,13 @@
       - org.mozilla.firefox
     when: ansible_architecture == "x86_64"
     
-  - name: Update Python modules
+  # Do not install Python packages using pip without venv
+  - name: Uninstall Python modules
     pip:
       name:
         - pip
         - yt-dlp
-      state: latest
+      state: absent
       
   - name: Schedule maintenance
     cron:
