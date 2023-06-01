@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-DEBIAN_RELEASE=bullseye
+CODENAME=bullseye
 
 ########################
 # Check root privilege #
@@ -10,10 +10,10 @@ if [ $EUID -eq 0 ]; then
   ################
   # Set up repos #
   ################
-  echo "deb https://deb.debian.org/debian/ $DEBIAN_RELEASE main non-free contrib" > /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ $DEBIAN_RELEASE-updates main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian-security/ $DEBIAN_RELEASE-security main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ $DEBIAN_RELEASE-backports main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free" > /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free" >> /etc/apt/sources.list
   apt-get -qq update
   
   #############################
@@ -29,7 +29,7 @@ if [ $EUID -eq 0 ]; then
   #############################
   # Configure GRUB bootloader #
   #############################
-  sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=10/' /etc/default/grub
+  sed -Ei "s/GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=3/" /etc/default/grub
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub2
   
@@ -37,7 +37,7 @@ if [ $EUID -eq 0 ]; then
   # Make home directories private #
   #################################
   chmod 0700 /home/*/
-  sed -Ei 's/DIR_MODE=[0-9]+/DIR_MODE=0700/' /etc/adduser.conf
+  sed -Ei "s/DIR_MODE=[0-9]+/DIR_MODE=0700/" /etc/adduser.conf
   
   ###############################
   # Hand over config to ansible #
