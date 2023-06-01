@@ -15,7 +15,6 @@
         - firefox-esr
         - firmware-linux-nonfree
         - flatpak
-        - freecad
         - gchempaint
         - gcu-bin
         - ghostwriter
@@ -45,6 +44,7 @@
     package:
       name:
         - chromium
+        - freecad
         - frogatto
         - gnome-games
         - gnome-software
@@ -67,6 +67,7 @@
       state: present
     with_items:
       - com.prusa3d.PrusaSlicer
+      - org.freecadweb.FreeCAD
       - org.zotero.Zotero
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
