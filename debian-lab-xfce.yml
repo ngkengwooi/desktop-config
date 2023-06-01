@@ -89,13 +89,14 @@
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
       state: present
-    
-  - name: Update Python modules
+  
+  # Do not install Python packages from PyPi.org without virtualenv
+  - name: Uninstall Python modules
     pip:
       name:
-        - pip
+        - lastversion
         - yt-dlp
-      state: latest
+      state: absent
       
   - name: Install system upgrade script
     get_url:
