@@ -11,7 +11,6 @@
   - name: Install packages
     package:
       name:
-        - 0ad
         - adwaita-qt
         - audacity
         - blender
@@ -23,7 +22,6 @@
         - firefox-esr
         - firmware-linux-nonfree
         - flatpak
-        - freecad
         - frogatto
         - gchempaint
         - gcu-bin
@@ -66,14 +64,10 @@
         - r-cran-rcmdr
         - remmina
         - rhythmbox-plugin-alternative-toolbar
-        - scribus
-        - sigil
         - simplescreenrecorder
         - soundconverter
         - sound-juicer
         - steam-devices
-        - supertux
-        - supertuxkart
         - torbrowser-launcher
         - ttf-mscorefonts-installer
         - unattended-upgrades
@@ -85,10 +79,16 @@
   - name: Uninstall packages
     package:
       name:
+        - 0ad
         - chromium
         - epiphany-browser
         - fonts-arphic-*
+        - freecad
         - openttd
+        - scribus
+        - sigil
+        - supertux
+        - supertuxkart
         - synaptic
         - termit
         - timekpr-next
