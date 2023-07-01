@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  octoprint:
+    image: docker.io/octoprint/octoprint:latest
+    container_name: octoprint
+    restart: unless-stopped
+    ports:
+      - 8059:80
+    # devices:
+    # use `python -m serial.tools.miniterm` to see what the name is of the printer, this requires pyserial
+    #  - /dev/ttyACM0:/dev/ttyACM0
+    #  - /dev/video0:/dev/video0
+    volumes:
+      - ./config:/octoprint
+    environment:
+      TZ: Europe/London
+      #ENABLE_MJPG_STREAMER: "true"
