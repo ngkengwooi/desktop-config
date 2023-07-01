@@ -85,12 +85,12 @@
     when: ansible_architecture == "x86_64"
     
   # Do not install Python packages using pip without venv
-  - name: Uninstall Python modules
-    pip:
-      name:
-        - lastversion
-        - yt-dlp
-      state: absent
+  #- name: Uninstall Python modules
+  #  pip:
+  #    name:
+  #      - lastversion
+  #      - yt-dlp
+  #    state: absent
       
   - name: Schedule maintenance
     cron:
