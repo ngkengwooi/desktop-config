@@ -39,6 +39,14 @@ if [ $EUID -eq 0 ]; then
   sed -Ei "s/GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=3/" /etc/default/grub
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub
+
+  #################################
+  # Install system upgrade script #
+  #################################
+  curl \
+    -o /usr/local/bin/system-upgrade \
+    -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/system-upgrade
+  chmod +x /usr/local/bin/system-upgrade
   
   ###############################
   # Hand over config to ansible #
