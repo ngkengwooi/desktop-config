@@ -33,7 +33,7 @@
         - pronterface
         - prusa-slicer
         - python3-pip
-        - qgnomeplatform-gtk5
+        - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - qt6-gtk-platformtheme       
