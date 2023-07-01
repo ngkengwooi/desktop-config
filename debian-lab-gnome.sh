@@ -14,7 +14,7 @@ if [ $EUID -eq 0 ]; then
   echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
-  apt-get -qq update
+  apt-get update
   
   # Disable fasttrack repos
   # Not yet available for bookworm
@@ -51,7 +51,7 @@ if [ $EUID -eq 0 ]; then
   ###############################
   # Hand over config to ansible #
   ###############################
-  apt-get -yy install ansible git
+  apt-get -y install ansible git
   ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-gnome-$CODENAME.yml
   
 else
