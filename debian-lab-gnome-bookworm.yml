@@ -16,12 +16,12 @@
         - firefox-esr
         - firmware-linux-nonfree
         - flatpak
+        - freecad
         - gchempaint
         - gcu-bin
         - ghostwriter
         - gimp
         - gnome-shell-extension-caffeine
-        - gnome-software-plugin-flatpak
         - grsync
         - ibus-libpinyin
         - imagej
@@ -31,11 +31,12 @@
         - openssh-server
         - pdfarranger
         - pronterface
+        - prusa-slicer
         - python3-pip
         - qgnomeplatform-gtk5
         - qt5-gtk-platformtheme
         - qt5-style-plugins
-        - qt6-gtk-platformtheme        
+        - qt6-gtk-platformtheme       
         - remmina
         - rhythmbox-plugin-alternative-toolbar
         - ttf-mscorefonts-installer
@@ -47,14 +48,13 @@
     package:
       name:
         - chromium
-        - freecad
         - frogatto
         - gnome-games
         - gnome-software
-        - prusa-slicer # Install flatpak version instead
+        - gnome-software-plugin-flatpak
         - synaptic
-        - webext-https-everywhere # No longer needed, now shipped with Firefox
-      state: absent    
+        - webext-https-everywhere
+      state: absent
     
   - name: Enable FlatHub
     flatpak_remote:
@@ -69,8 +69,6 @@
       method: system
       state: present
     with_items:
-      - com.prusa3d.PrusaSlicer
-      - org.freecadweb.FreeCAD
       - org.zotero.Zotero
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
@@ -81,6 +79,8 @@
       method: system
       state: absent
     with_items:
+      - com.prusa3d.PrusaSlicer
+      - org.freecadweb.FreeCAD
       - org.mozilla.firefox
     when: ansible_architecture == "x86_64"
     
@@ -89,7 +89,6 @@
     pip:
       name:
         - lastversion
-        - pip
         - yt-dlp
       state: absent
       
