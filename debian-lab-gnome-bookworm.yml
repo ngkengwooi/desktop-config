@@ -41,7 +41,7 @@
         - rhythmbox-plugin-alternative-toolbar
         - ttf-mscorefonts-installer
         - unattended-upgrades
-        - webext-ublock-origin
+        - webext-ublock-origin-firefox
       state: latest
       
   - name: Uninstall packages
