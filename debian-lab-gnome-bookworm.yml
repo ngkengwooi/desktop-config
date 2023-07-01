@@ -53,6 +53,7 @@
         - gnome-software
         - gnome-software-plugin-flatpak
         - synaptic
+        - transmission
         - webext-https-everywhere
       state: absent
     
