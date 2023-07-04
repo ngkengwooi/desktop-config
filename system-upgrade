@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 ##########################################################
 # This script will install all available updates for any #
@@ -11,8 +11,8 @@
 ##########################################################
 
 apt-get update
-apt-get -y dist-upgrade
-apt-get -y autoremove --purge
-apt-get -y autoclean
-flatpak -y update
+apt-get -yy dist-upgrade
+apt-get -yy autoremove --purge
+apt-get -yy autoclean
 flatpak -y uninstall --unused
+flatpak -y update
