@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-CODENAME=bullseye
+CODENAME=bookworm
 
 ########################
 # Check root privilege #
@@ -10,10 +10,10 @@ if [ $EUID -eq 0 ]; then
   ################
   # Set up repos #
   ################
-  echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free" > /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free" >> /etc/apt/sources.list
-  echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free non-free-firmware" > /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+  echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   apt-get -qq update
   
   #############################
@@ -21,9 +21,9 @@ if [ $EUID -eq 0 ]; then
   #############################
   apt-get -yy dist-upgrade
   
-  ################################
-  # Enable GTK theme for QT apps #
-  ################################
+  ####################################
+  # Make QT and GTK themes get along #
+  ####################################
   echo "QT_QPA_PLATFORMTHEME=gtk2" > /etc/environment
   
   #############################
@@ -35,6 +35,7 @@ if [ $EUID -eq 0 ]; then
   
   #################################
   # Make home directories private #
+  # Since bookworm default=0700   #
   #################################
   chmod 0700 /home/*/
   sed -Ei "s/DIR_MODE=[0-9]+/DIR_MODE=0700/" /etc/adduser.conf
@@ -43,7 +44,7 @@ if [ $EUID -eq 0 ]; then
   # Hand over config to ansible #
   ###############################
   apt-get -yy install ansible git
-  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce.yml
+  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce-$CODENAME.yml
   
 else
   echo "Please execute this script as root."
