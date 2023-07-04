@@ -18,7 +18,6 @@
         - firmware-b43-installer
         - firmware-linux-nonfree
         - flatpak
-        - fonts-cantarell
         - fonts-roboto
         - ibus-libpinyin
         - imagej
@@ -26,8 +25,11 @@
         - lightdm-gtk-greeter-settings
         - p7zip-full
         - python3-pip
+        - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
-        - qt5-style-plugins        
+        - qt5-style-plugins
+        - qt6-gtk-platformtheme
+        - remmina
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
@@ -38,47 +40,13 @@
   - name: Uninstall packages
     package:
       name:
-        - adapta-gtk-theme
-        - anthy*
-        - chromium
-        - debian-reference*
-        - deluge
-        - epiphany-browser
-        - evince
         - exfalso
-        - fcitx*
-        - gdm3
-        - gnome-clocks
-        - gnome-core
-        - gnome-dictionary
-        - gnome-documents
-        - gnome-games
-        - gnome-icon-theme
-        - gnome-maps
-        - gnome-music
-        - gnome-shell
-        - gnome-software
-        - gnome-todo
-        - gnome-weather
-        - goldendict
-        - mlterm*
-        - mozc*
-        - moka-icon-theme
-        - mpv
-        - papirus-icon-theme
         - parole
         - quod-libet
-        - ristretto
-        - smplayer
-        - spice-vdagent
         - synaptic
-        - task-lxde-desktop
-        - termit
         - transmission-gtk
         - uxterm
-        - webext-privacy-badger
         - xfburn
-        - xiterm*
         - xsane
         - xterm
       state: absent
@@ -89,24 +57,16 @@
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
       state: present
-  
-  # Do not install Python packages from PyPi.org without virtualenv
-  - name: Uninstall Python modules
-    pip:
-      name:
-        - lastversion
-        - yt-dlp
-      state: absent
       
   - name: Install system upgrade script
     get_url:
-      url: https://github.com/ngkengwooi/desktop-config/raw/main/system-upgrade
+      url: https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/system-upgrade
       dest: /usr/local/bin/system-upgrade
       mode: 0754
       
   - name: Schedule maintenance
     cron:
       name: "Hourly ansible-pull config"
-      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce.yml"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce-bookworm.yml"
       minute: "0"
       user: root
