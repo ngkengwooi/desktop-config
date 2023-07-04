@@ -11,6 +11,7 @@
   - name: Install packages
     package:
       name:
+        - cheese
         - task-xfce-desktop
         - arc-theme
         - chromium
@@ -20,6 +21,7 @@
         - firmware-linux-nonfree
         - flatpak
         - fonts-roboto
+        - guvcview
         - ibus-libpinyin
         - imagej
         - lame
@@ -31,6 +33,7 @@
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - remmina
+        - simplescreenrecorder
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
