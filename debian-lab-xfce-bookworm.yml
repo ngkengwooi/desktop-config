@@ -11,7 +11,6 @@
   - name: Install packages
     package:
       name:
-        - cheese
         - task-xfce-desktop
         - arc-theme
         - chromium
@@ -45,6 +44,7 @@
   - name: Uninstall packages
     package:
       name:
+        - cheese
         - exfalso
         - parole
         - quod-libet
