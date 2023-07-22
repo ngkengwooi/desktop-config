@@ -27,8 +27,6 @@
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-caffeine
         - gnome-subtitles
-        - grsync
-        - gufw
         - handbrake
         - ibus-libpinyin
         - imagej
@@ -37,7 +35,6 @@
         - lyx
         - mkvtoolnix-gui
         - mp3wrap
-        - musescore3
         - nautilus-nextcloud
         - nextcloud-desktop
         - openssh-server
@@ -77,8 +74,11 @@
         - gcu-bin
         - ghostwriter
         - gnome-software-plugin-flatpak
+        - grsync
+        - gufw
         - homebank
         - keepassxc
+        - musescore3
         - openttd
         - pitivi
         - r-base
