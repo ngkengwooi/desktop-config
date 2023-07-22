@@ -82,7 +82,7 @@
         - openttd
         - pitivi
         - r-base
-        - r-cran-rcmdr
+        - r-*
         - scribus
         - sigil
         - steam-devices
