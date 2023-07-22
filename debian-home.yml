@@ -35,7 +35,8 @@
         - brasero
         - puddletag
 
-        # 3D design        
+        # 3D design
+        - freecad
         - pronterface
         - prusa-slicer
 
