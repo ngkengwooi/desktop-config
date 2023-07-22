@@ -11,53 +11,70 @@
   - name: Install packages
     package:
       name:
+        # Theming
         - adwaita-qt
-        - audacity
-        - brasero
-        - evolution-ews
-        - ffmpeg
-        - filezilla
-        - firefox-esr
-        - firmware-linux-nonfree
-        - flatpak
-        - frogatto
-        - gimp
-        - gnome-dictionary
-        - gnome-mastermind
-        - gnome-shell-extension-appindicator
-        - gnome-shell-extension-caffeine
-        - gnome-subtitles
-        - handbrake
-        - ibus-libpinyin
-        - imagej
-        - inkscape
-        - lame
-        - lyx
-        - mkvtoolnix-gui
-        - mp3wrap
-        - nautilus-nextcloud
-        - nextcloud-desktop
-        - openssh-server
-        - pandoc
-        - pdfarranger
-        - python3-pip
-        - pronterface
-        - prusa-slicer
-        - puddletag
         - qgnomeplatform-qt5
-        - qrencode
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - qt6-gtk-platformtheme
-        - remmina
         - rhythmbox-plugin-alternative-toolbar
-        - simplescreenrecorder
+        
+        # Multimedia editing
+        - audacity
+        - ffmpeg
+        - handbrake
+        - lame
+        - mkvtoolnix-gui
+        - mp3wrap
         - soundconverter
         - sound-juicer
+        - gnome-subtitles
+        - simplescreenrecorder
+
+        # Multimedia consumption
+        - brasero
+        - puddletag
+
+        # 3D design        
+        - pronterface
+        - prusa-slicer
+
+        # Office
+        - evolution-ews
+        - gnome-dictionary
+        - lyx
+        - nautilus-nextcloud
+        - nextcloud-desktop
+        - pdfarranger
+
+        # Web browsing
+        - chromium
+        - firefox-esr
+        - webext-ublock-origin-chromium
+        - webext-ublock-origin-firefox
+
+        # Graphics
+        - gimp
+        - imagej
+        - inkscape
+
+        # System utilities
+        - firmware-linux-nonfree
+        - flatpak
+        - gnome-shell-extension-appindicator
+        - gnome-shell-extension-caffeine
+        - ibus-libpinyin
+        - python3-pip
+        - qrencode
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
-        - webext-ublock-origin-firefox
+        - openssh-server
+        - remmina
+
+        # Games
+        - frogatto
+        - gnome-mastermind
       state: latest
       
   - name: Uninstall packages
@@ -65,7 +82,6 @@
       name:
         - 0ad
         - blender
-        - chromium
         - clamtk
         - epiphany-browser
         - fonts-arphic-*
@@ -80,6 +96,7 @@
         - keepassxc
         - musescore3
         - openttd
+        - pandoc
         - pitivi
         - r-base
         - r-*
