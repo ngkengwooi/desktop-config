@@ -108,13 +108,13 @@
       method: system
       state: present
       
-  - name: Install flatpaks
-    flatpak:
-      name: "{{item}}"
-      method: system
-      state: present
-    with_items:
-    when: ansible_architecture == "x86_64"
+  #- name: Install flatpaks
+  #  flatpak:
+  #    name: "{{item}}"
+  #    method: system
+  #    state: present
+  #  with_items:
+  #  when: ansible_architecture == "x86_64"
   
   - name: Uninstall flatpaks
     flatpak:
