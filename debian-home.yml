@@ -13,9 +13,7 @@
       name:
         - adwaita-qt
         - audacity
-        - blender
         - brasero
-        - clamtk
         - evolution-ews
         - ffmpeg
         - filezilla
@@ -23,27 +21,20 @@
         - firmware-linux-nonfree
         - flatpak
         - frogatto
-        - gchempaint
-        - gcu-bin
-        - ghostwriter
         - gimp
         - gnome-dictionary
         - gnome-mastermind
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-caffeine
-        - gnome-software-plugin-flatpak
         - gnome-subtitles
         - grsync
         - gufw
         - handbrake
-        - homebank
         - ibus-libpinyin
         - imagej
         - inkscape
-        - keepassxc
         - lame
         - lyx
-        - mp3wrap
         - mkvtoolnix-gui
         - mp3wrap
         - musescore3
@@ -53,51 +44,61 @@
         - pandoc
         - pdfarranger
         - python3-pip
-        - pitivi
         - pronterface
         - prusa-slicer
         - puddletag
+        - qgnomeplatform-qt5
         - qrencode
         - qt5-gtk-platformtheme
         - qt5-style-plugins
-        - r-base
-        - r-cran-rcmdr
+        - qt6-gtk-platformtheme
         - remmina
         - rhythmbox-plugin-alternative-toolbar
         - simplescreenrecorder
         - soundconverter
         - sound-juicer
-        - steam-devices
-        - torbrowser-launcher
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
         - webext-ublock-origin-firefox
-        - wireguard
       state: latest
       
   - name: Uninstall packages
     package:
       name:
         - 0ad
+        - blender
         - chromium
+        - clamtk
         - epiphany-browser
         - fonts-arphic-*
         - freecad
+        - gchempaint
+        - gcu-bin
+        - ghostwriter
+        - gnome-software-plugin-flatpak
+        - homebank
+        - keepassxc
         - openttd
+        - pitivi
+        - r-base
+        - r-cran-rcmdr
         - scribus
         - sigil
+        - steam-devices
         - supertux
         - supertuxkart
         - synaptic
         - termit
         - timekpr-next
+        - torbrowser-launcher
         - unknown-horizons
         - virtualbox*
         - vlc
         - warzone2100
         - webext-https-everywhere # Deprecated
         - webext-privacy-badger
+        - wireguard
       state: absent      
     
   - name: Enable FlatHub
