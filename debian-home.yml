@@ -114,21 +114,6 @@
       method: system
       state: present
     with_items:
-      - app.drey.Dialect
-      - com.bitwarden.desktop
-      - com.github.johnfactotum.Foliate
-      - com.github.tchx84.Flatseal
-      - com.tutanota.Tutanota
-      - com.usebottles.bottles
-      - com.valvesoftware.Steam
-      - de.haeckerfelix.Shortwave
-      - edu.mit.Scratch
-      - io.freetubeapp.FreeTube
-      - net.lutris.Lutris
-      - org.gnome.Boxes
-      - org.jitsi.jitsi-meet
-      - org.zotero.Zotero
-      - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
   
   - name: Uninstall flatpaks
@@ -136,25 +121,27 @@
       name: "{{item}}"
       method: system
       state: absent
-    with_items:      
+    with_items:
+      - app.drey.Dialect
+      - com.bitwarden.desktop
+      - com.github.johnfactotum.Foliate
+      - com.github.tchx84.Flatseal      
       - com.microsoft.Teams
-      - io.github.mimbrero.WhatsAppDesktop      
+      - com.tutanota.Tutanota
+      - com.usebottles.bottles
+      - com.valvesoftware.Steam
+      - de.haeckerfelix.Shortwave
+      - edu.mit.Scratch
+      - io.freetubeapp.FreeTube
+      - io.github.mimbrero.WhatsAppDesktop
+      - net.lutris.Lutris
+      - org.gnome.Boxes
+      - org.jitsi.jitsi-meet
+      - org.zotero.Zotero
       - uk.co.ibboard.cawbird
+      - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
-  - name: Update Python modules
-    pip:
-      name:
-        - pip
-        - yt-dlp
-      state: latest
-  
-  - name: Uninstall youtube-dl
-    pip:
-      name:
-        - youtube-dl
-      state: absent
-      
   - name: Schedule maintenance
     cron:
       name: "Hourly ansible-pull config"
