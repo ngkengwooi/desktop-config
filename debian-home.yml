@@ -133,7 +133,6 @@
       state: present
     with_items:
       - net.lutris.Lutris
-      - org.chromium.Chromium
     when: ansible_architecture == "x86_64"
   
   - name: Uninstall flatpaks
@@ -155,6 +154,7 @@
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
       - net.lutris.Lutris
+      - org.chromium.Chromium
       - org.gnome.Boxes
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
