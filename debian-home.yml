@@ -61,6 +61,7 @@
         # System utilities
         - firmware-linux-nonfree
         - flatpak
+        - gnome-boxes
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-caffeine
         - ibus-libpinyin
