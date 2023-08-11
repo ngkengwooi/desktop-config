@@ -58,12 +58,6 @@
         - imagej
         - inkscape
 
-        # Virtualisation        
-        - gnome-boxes
-        - libvirt-clients
-        - spice-client-gtk
-        - spice-webdavd
-
         # System utilities
         - firmware-linux-nonfree
         - flatpak
@@ -99,6 +93,12 @@
         # Games
         - 0ad
         - openttd
+
+        # Virtualisation        
+        - gnome-boxes
+        - libvirt-clients
+        - spice-client-gtk
+        - spice-webdavd
 
         # Other
         - blender
