@@ -42,6 +42,7 @@
 
         # Office
         - evolution-ews
+        - foliate
         - gnome-dictionary
         - lyx
         - nautilus-nextcloud
@@ -138,7 +139,6 @@
       method: system
       state: present
     with_items:
-      - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.usebottles.bottles
       - net.lutris.Lutris
@@ -154,6 +154,7 @@
     with_items:
       - app.drey.Dialect
       - com.bitwarden.desktop
+      - com.github.johnfactotum.Foliate
       - com.microsoft.Teams
       - com.tutanota.Tutanota
       - com.valvesoftware.Steam
