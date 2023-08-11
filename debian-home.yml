@@ -138,7 +138,13 @@
       method: system
       state: present
     with_items:
+      - com.bitwarden.desktop
+      - com.github.johnfactotum.Foliate
+      - com.github.tchx84.Flatseal
+      - com.usebottles.bottles
       - net.lutris.Lutris
+      - org.jitsi.jitsi-meet
+      - org.zotero.Zotero
     when: ansible_architecture == "x86_64"
   
   - name: Uninstall flatpaks
@@ -148,22 +154,15 @@
       state: absent
     with_items:
       - app.drey.Dialect
-      - com.bitwarden.desktop
-      - com.github.johnfactotum.Foliate
-      - com.github.tchx84.Flatseal      
       - com.microsoft.Teams
       - com.tutanota.Tutanota
-      - com.usebottles.bottles
       - com.valvesoftware.Steam
       - de.haeckerfelix.Shortwave
       - edu.mit.Scratch
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
-      - net.lutris.Lutris
       - org.chromium.Chromium
       - org.gnome.Boxes
-      - org.jitsi.jitsi-meet
-      - org.zotero.Zotero
       - uk.co.ibboard.cawbird
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
