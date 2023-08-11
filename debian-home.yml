@@ -61,7 +61,8 @@
         # Virtualisation        
         - gnome-boxes
         - libvirt-clients
-        - spice-vdagent
+        - spice-client-gtk
+        - spice-webdavd
 
         # System utilities
         - firmware-linux-nonfree
