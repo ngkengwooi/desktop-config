@@ -138,7 +138,6 @@
       method: system
       state: present
     with_items:
-      - com.bitwarden.desktop
       - com.github.johnfactotum.Foliate
       - com.github.tchx84.Flatseal
       - com.usebottles.bottles
@@ -154,6 +153,7 @@
       state: absent
     with_items:
       - app.drey.Dialect
+      - com.bitwarden.desktop
       - com.microsoft.Teams
       - com.tutanota.Tutanota
       - com.valvesoftware.Steam
