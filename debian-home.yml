@@ -58,10 +58,13 @@
         - imagej
         - inkscape
 
+        # Virtualisation        
+        - gnome-boxes
+        - libvirt-clients
+
         # System utilities
         - firmware-linux-nonfree
         - flatpak
-        - gnome-boxes
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-caffeine
         - ibus-libpinyin
