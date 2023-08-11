@@ -49,9 +49,7 @@
         - pdfarranger
 
         # Web browsing
-        - chromium
         - firefox-esr
-        - webext-ublock-origin-chromium
         - webext-ublock-origin-firefox
 
         # Graphics
@@ -75,16 +73,29 @@
 
         # Games
         - frogatto
+        - gnome-games
         - gnome-mastermind
+        - supertux
+        - supertuxkart
+        - unknown-horizons
+        
       state: latest
       
   - name: Uninstall packages
     package:
       name:
+        # Web browsing        
+        - chromium
+        - epiphany-browser
+        - webext-ublock-origin-chromium
+        
+        # Games
         - 0ad
+        - openttd
+
+        # Other
         - blender
         - clamtk
-        - epiphany-browser
         - fonts-arphic-*
         - gchempaint
         - gcu-bin
@@ -95,7 +106,6 @@
         - homebank
         - keepassxc
         - musescore3
-        - openttd
         - pandoc
         - pitivi
         - r-base
@@ -103,13 +113,10 @@
         - scribus
         - sigil
         - steam-devices
-        - supertux
-        - supertuxkart
         - synaptic
         - termit
         - timekpr-next
         - torbrowser-launcher
-        - unknown-horizons
         - virtualbox*
         - vlc
         - warzone2100
