@@ -29,6 +29,7 @@
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - ristretto
+        - thunderbird
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
@@ -39,9 +40,13 @@
   - name: Uninstall packages
     package:
       name:
+        - arc-theme
+        - cheese
+        - chromium
         - eog
         - evince
         - evolution
+        - exfalso
         - gnome-clocks
         - gnome-calculator
         - gnome-contacts
@@ -49,24 +54,20 @@
         - gnome-documents
         - gnome-maps
         - gnome-music
+        - gnome-shell
         - gnome-software
         - gnome-sound-recorder
         - gnome-weather
+        - malcontent
         - nautilus
+        - rhythmbox
         - shotwell
-        - webext-ublock-origin-chromium
-        - remmina
-        - simplescreenrecorder
-        - imagej
-        - arc-theme
-        - chromium
-        - cheese
-        - exfalso
         - parole
         - quod-libet
         - synaptic
         - transmission-gtk
         - uxterm
+        - webext-ublock-origin-chromium
         - xfburn
         - xsane
         - xterm
