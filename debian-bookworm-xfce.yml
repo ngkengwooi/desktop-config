@@ -50,9 +50,11 @@
         - exfalso
         - gnome-clocks
         - gnome-calculator
+        - gnome-characters
         - gnome-contacts
         - gnome-calendar
         - gnome-documents
+        - gnome-font-viewer
         - gnome-maps
         - gnome-music
         - gnome-shell
