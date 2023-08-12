@@ -35,6 +35,7 @@
         - qt6-gtk-platformtheme
         - remmina
         - ristretto
+        - simplescreenrecorder
         - thunderbird
         - ttf-mscorefonts-installer
         - unattended-upgrades
