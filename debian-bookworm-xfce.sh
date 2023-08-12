@@ -45,7 +45,7 @@ if [ $EUID -eq 0 ]; then
   ####################################
   apt-get -y install \
     fonts-roboto \
-    gnome-system-tools \ # Needed for GUI user management
+    gnome-system-tools \
     lightdm \
     lightdm-gtk-greeter-settings \
     plymouth \
