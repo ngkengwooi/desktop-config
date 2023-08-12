@@ -76,7 +76,7 @@ if [ $EUID -eq 0 ]; then
   # Hand over config to ansible #
   ###############################
   apt-get -yy install ansible git
-  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce-$CODENAME.yml
+  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-$CODENAME-xfce.yml
   
 else
   echo "Please execute this script as root."
