@@ -28,6 +28,7 @@
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - qt6-gtk-platformtheme
+        - ristretto
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
@@ -38,6 +39,21 @@
   - name: Uninstall packages
     package:
       name:
+        - eog
+        - evince
+        - evolution
+        - gnome-clocks
+        - gnome-calculator
+        - gnome-contacts
+        - gnome-calendar
+        - gnome-documents
+        - gnome-maps
+        - gnome-music
+        - gnome-software
+        - gnome-sound-recorder
+        - gnome-weather
+        - nautilus
+        - shotwell
         - webext-ublock-origin-chromium
         - remmina
         - simplescreenrecorder
