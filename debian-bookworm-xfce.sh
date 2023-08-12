@@ -54,6 +54,19 @@ if [ $EUID -eq 0 ]; then
     yaru-theme-gtk \
     yaru-theme-icon
 
+  #################################################
+  # Remove GNOME desktop environment (if present) #
+  #################################################
+  apt-get -y autoremove --purge \
+    eog \
+    evince \
+    file-roller \
+    gdm3 \
+    gnome-session \
+    gnome-terminal \
+    simple-scan \
+    totem
+
   ##################################
   # Show usernames on login screen #
   ##################################
