@@ -1,0 +1,77 @@
+- hosts: localhost
+  become: true
+  tasks:
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
+    package:
+      name:
+        - task-xfce-desktop
+        - ffmpeg
+        - firefox-esr
+        - firmware-b43-installer
+        - firmware-linux-nonfree
+        - flatpak
+        - fonts-roboto
+        - guvcview
+        - ibus-libpinyin
+        - lame
+        - lightdm-gtk-greeter-settings
+        - p7zip-full
+        - python3-pip
+        - qgnomeplatform-qt5
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - qt6-gtk-platformtheme
+        - ttf-mscorefonts-installer
+        - unattended-upgrades
+        - unrar
+        - vlc
+        - webext-ublock-origin-firefox
+      state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:
+        - webext-ublock-origin-chromium
+        - remmina
+        - simplescreenrecorder
+        - imagej
+        - arc-theme
+        - chromium
+        - cheese
+        - exfalso
+        - parole
+        - quod-libet
+        - synaptic
+        - transmission-gtk
+        - uxterm
+        - xfburn
+        - xsane
+        - xterm
+      state: absent
+      
+  - name: Enable FlatHub
+    flatpak_remote:
+      name: flathub
+      flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+      method: system
+      state: present
+      
+  - name: Install system upgrade script
+    get_url:
+      url: https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/system-upgrade
+      dest: /usr/local/bin/system-upgrade
+      mode: 0754
+      
+  - name: Schedule maintenance
+    cron:
+      name: "Hourly ansible-pull config"
+      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-bookworm-xfce.yml"
+      minute: "0"
+      user: root
