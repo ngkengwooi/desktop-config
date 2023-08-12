@@ -18,6 +18,7 @@
         - firmware-linux-nonfree
         - flatpak
         - fonts-roboto
+        - gnome-disk-utility
         - guvcview
         - ibus-libpinyin
         - lame
