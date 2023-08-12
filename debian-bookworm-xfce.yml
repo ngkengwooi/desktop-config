@@ -33,6 +33,7 @@
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - qt6-gtk-platformtheme
+        - remmina
         - ristretto
         - thunderbird
         - ttf-mscorefonts-installer
