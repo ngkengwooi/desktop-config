@@ -18,12 +18,16 @@
         - firmware-linux-nonfree
         - flatpak
         - fonts-roboto
+        - gimp
         - gnome-disk-utility
         - guvcview
         - ibus-libpinyin
+        - imagej
+        - inkscape
         - lame
         - lightdm-gtk-greeter-settings
         - p7zip-full
+        - pdfarranger
         - python3-pip
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
