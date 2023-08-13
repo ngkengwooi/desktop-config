@@ -11,12 +11,13 @@
   - name: Install packages
     package:
       name:
-        - task-xfce-desktop
         - ffmpeg
         - firefox-esr
         - firmware-b43-installer
         - firmware-linux-nonfree
         - flatpak
+        - fonts-noto-cjk
+        - fonts-noto-cjk-extra
         - fonts-roboto
         - gimp
         - gnome-disk-utility
