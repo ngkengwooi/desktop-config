@@ -66,11 +66,16 @@
         - ibus-libpinyin
         - python3-pip
         - qrencode
-        - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
         - openssh-server
         - remmina
+
+        # Fonts
+        - fonts-noto-cjk
+        - fonts-noto-cjk-extra
+        - fonts-roboto
+        - ttf-mscorefonts-installer
 
         # Games
         - frogatto
