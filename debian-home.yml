@@ -128,7 +128,7 @@
         - synaptic
         - termit
         - timekpr-next
-        - torbrowser-launcher
+        #- torbrowser-launcher
         - virtualbox*
         - vlc
         - warzone2100
