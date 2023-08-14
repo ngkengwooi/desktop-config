@@ -129,7 +129,7 @@
         - termit
         - timekpr-next
         #- torbrowser-launcher
-        - virtualbox*
+        #- virtualbox*
         - vlc
         - warzone2100
         - webext-https-everywhere # Deprecated
