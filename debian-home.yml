@@ -153,6 +153,7 @@
       - com.github.tchx84.Flatseal
       - com.usebottles.bottles
       - net.lutris.Lutris
+      - org.gnome.Boxes
       - org.jitsi.jitsi-meet
       - org.zotero.Zotero
     when: ansible_architecture == "x86_64"
