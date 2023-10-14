@@ -11,83 +11,65 @@
   - name: Install packages
     package:
       name:
-        # Theming
         - adwaita-qt
-        - qgnomeplatform-qt5
-        - qt5-gtk-platformtheme
-        - qt5-style-plugins
-        - qt6-gtk-platformtheme
-        - rhythmbox-plugin-alternative-toolbar
-        
-        # Multimedia editing
         - audacity
-        - ffmpeg
-        - handbrake
-        - lame
-        - mkvtoolnix-gui
-        - mp3wrap
-        - obs-studio
-        - soundconverter
-        - sound-juicer
-        - gnome-subtitles
-
-        # Multimedia consumption
         - brasero
-        - puddletag
-
-        # 3D design
-        - freecad
-        - pronterface
-        - prusa-slicer
-
-        # Office
         - dialect
         - evolution-ews
-        - foliate
-        - gnome-dictionary
-        - lyx
-        - nautilus-nextcloud
-        - nextcloud-desktop
-        - pdfarranger
-
-        # Web browsing
+        - ffmpeg
         - firefox-esr
-        - webext-ublock-origin-firefox
-
-        # Graphics
-        - gimp
-        - imagej
-        - inkscape
-
-        # System utilities
         - firmware-linux-nonfree
         - flatpak
-        - gnome-shell-extension-appindicator
-        - gnome-shell-extension-caffeine
-        - gnome-software-plugin-flatpak
-        - ibus-libpinyin
-        - pipx
-        - python3-pip
-        - qrencode
-        - unattended-upgrades
-        - unrar
-        - openssh-server
-        - remmina
-
-        # Fonts
+        - foliate
         - fonts-noto-cjk
         - fonts-noto-cjk-extra
         - fonts-roboto
-        - ttf-mscorefonts-installer
-
-        # Games
+        - freecad
         - frogatto
+        - gimp
+        - gnome-boxes
+        - gnome-dictionary
         - gnome-games
         - gnome-mastermind
+        - gnome-shell-extension-appindicator
+        - gnome-shell-extension-caffeine
+        - gnome-software-plugin-flatpak
+        - gnome-subtitles
+        - handbrake
+        - ibus-libpinyin
+        - imagej
+        - inkscape
+        - lame
+        - libvirt-clients
+        - lyx
+        - mkvtoolnix-gui
+        - mp3wrap
+        - nautilus-nextcloud
+        - nextcloud-desktop
+        - obs-studio
+        - openssh-server
+        - pdfarranger
+        - pipx
+        - pronterface
+        - prusa-slicer
+        - puddletag
+        - python3-pip
+        - qgnomeplatform-qt5
+        - qrencode
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - qt6-gtk-platformtheme
+        - remmina
+        - rhythmbox-plugin-alternative-toolbar
+        - sound-juicer
+        - soundconverter
         - supertux
         - supertuxkart
+        - ttf-mscorefonts-installer
+        - unattended-upgrades
         - unknown-horizons
-        
+        - unrar
+        - webext-ublock-origin-firefox
       state: latest
       
   - name: Uninstall packages
@@ -102,9 +84,7 @@
         - 0ad
         - openttd
 
-        # Virtualisation        
-        - gnome-boxes
-        - libvirt-clients
+        # Virtualisation 
         - spice-client-gtk
         - spice-webdavd
 
@@ -115,7 +95,6 @@
         - gchempaint
         - gcu-bin
         - ghostwriter
-        - gnome-software-plugin-flatpak
         - grsync
         - gufw
         - homebank
