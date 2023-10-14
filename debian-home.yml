@@ -26,10 +26,10 @@
         - lame
         - mkvtoolnix-gui
         - mp3wrap
+        - obs-studio
         - soundconverter
         - sound-juicer
         - gnome-subtitles
-        - simplescreenrecorder
 
         # Multimedia consumption
         - brasero
@@ -41,6 +41,7 @@
         - prusa-slicer
 
         # Office
+        - dialect
         - evolution-ews
         - foliate
         - gnome-dictionary
@@ -63,7 +64,9 @@
         - flatpak
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-caffeine
+        - gnome-software-plugin-flatpak
         - ibus-libpinyin
+        - pipx
         - python3-pip
         - qrencode
         - unattended-upgrades
@@ -124,6 +127,7 @@
         - r-*
         - scribus
         - sigil
+        - simplescreenrecorder
         - steam-devices
         - synaptic
         - termit
@@ -151,10 +155,6 @@
       state: present
     with_items:
       - com.github.tchx84.Flatseal
-      - com.usebottles.bottles
-      - net.lutris.Lutris
-      - org.gnome.Boxes
-      - org.jitsi.jitsi-meet
       - org.zotero.Zotero
     when: ansible_architecture == "x86_64"
   
@@ -175,7 +175,7 @@
       - io.freetubeapp.FreeTube
       - io.github.mimbrero.WhatsAppDesktop
       - org.chromium.Chromium
-      #- org.gnome.Boxes
+      - org.gnome.Boxes
       - uk.co.ibboard.cawbird
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
