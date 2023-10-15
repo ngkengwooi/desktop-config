@@ -55,6 +55,7 @@
         - gnome-software-plugin-flatpak
         - gnome-subtitles
         - grsync
+        - gsound-tools
         - gufw
         - handbrake
         - ibus-libpinyin
