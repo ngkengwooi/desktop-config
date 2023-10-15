@@ -26,6 +26,7 @@
       name:
         - 0ad
         - adwaita-qt
+        - apostrophe
         - audacity
         - brasero
         - chromium
@@ -44,7 +45,6 @@
         - frogatto
         - gchempaint
         - gcu-bin
-        - ghostwriter
         - gimp
         - gnome-boxes
         - gnome-dictionary
