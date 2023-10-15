@@ -11,9 +11,25 @@
   - name: Install packages
     package:
       name:
+- hosts: localhost
+  become: true
+  tasks: 
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
+    package:
+      name:
+        - 0ad
         - adwaita-qt
         - audacity
         - brasero
+        - chromium
+        - clamtk
         - dialect
         - evolution-ews
         - ffmpeg
@@ -26,6 +42,9 @@
         - fonts-roboto
         - freecad
         - frogatto
+        - gchempaint
+        - gcu-bin
+        - ghostwriter
         - gimp
         - gnome-boxes
         - gnome-dictionary
@@ -35,10 +54,13 @@
         - gnome-shell-extension-caffeine
         - gnome-software-plugin-flatpak
         - gnome-subtitles
+        - grsync
+        - gufw
         - handbrake
         - ibus-libpinyin
         - imagej
         - inkscape
+        - keepassxc
         - lame
         - libvirt-clients
         - lyx
@@ -48,8 +70,10 @@
         - nextcloud-desktop
         - obs-studio
         - openssh-server
+        - openttd
         - pdfarranger
         - pipx
+        - pitivi
         - pronterface
         - prusa-slicer
         - puddletag
@@ -68,57 +92,19 @@
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unknown-horizons
+        - unknown-horizons        
         - unrar
-        - webext-ublock-origin-firefox
+        - warzone2100
+        - webext-ublock-origin-chromium
+        - webext-ublock-origin-firefox        
       state: latest
       
   - name: Uninstall packages
     package:
       name:
-        # Web browsing        
-        - chromium
-        - epiphany-browser
-        - webext-ublock-origin-chromium
-        
-        # Games
-        - 0ad
-        - openttd
-
-        # Virtualisation 
-        - spice-client-gtk
-        - spice-webdavd
-
-        # Other
-        - blender
-        - clamtk
-        - fonts-arphic-*
-        - gchempaint
-        - gcu-bin
-        - ghostwriter
-        - grsync
-        - gufw
-        - homebank
-        - keepassxc
-        - musescore3
-        - pandoc
-        - pitivi
-        - r-base
-        - r-*
-        - scribus
-        - sigil
-        - simplescreenrecorder
-        - steam-devices
         - synaptic
-        - termit
-        - timekpr-next
-        #- torbrowser-launcher
-        #- virtualbox*
         - vlc
-        - warzone2100
-        - webext-https-everywhere # Deprecated
-        - webext-privacy-badger
-        - wireguard
-      state: absent      
+      state: absent
     
   - name: Enable FlatHub
     flatpak_remote:
