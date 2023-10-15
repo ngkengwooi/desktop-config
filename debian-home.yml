@@ -130,19 +130,7 @@
       method: system
       state: absent
     with_items:
-      - app.drey.Dialect
-      - com.bitwarden.desktop
-      - com.github.johnfactotum.Foliate
       - com.microsoft.Teams
-      - com.tutanota.Tutanota
-      - com.valvesoftware.Steam
-      - de.haeckerfelix.Shortwave
-      - edu.mit.Scratch
-      - io.freetubeapp.FreeTube
-      - io.github.mimbrero.WhatsAppDesktop
-      - org.chromium.Chromium
-      - org.gnome.Boxes
-      - uk.co.ibboard.cawbird
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
