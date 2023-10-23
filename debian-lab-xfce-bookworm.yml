@@ -13,7 +13,6 @@
       name:
         - task-xfce-desktop
         - arc-theme
-        - chromium
         - ffmpeg
         - firefox-esr
         - firmware-b43-installer
@@ -38,13 +37,13 @@
         - unrar
         - vlc
         - webext-ublock-origin-firefox
-        - webext-ublock-origin-chromium
       state: latest
       
   - name: Uninstall packages
     package:
       name:
         - cheese
+        - chromium
         - exfalso
         - parole
         - quod-libet
@@ -54,6 +53,7 @@
         - xfburn
         - xsane
         - xterm
+        - webext-ublock-origin-chromium
       state: absent
       
   - name: Enable FlatHub
