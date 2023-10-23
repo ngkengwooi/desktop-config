@@ -24,6 +24,7 @@
         - imagej
         - lame
         - lightdm-gtk-greeter-settings
+        - obs-studio
         - p7zip-full
         - python3-pip
         - qgnomeplatform-qt5
@@ -31,7 +32,6 @@
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - remmina
-        - simplescreenrecorder
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
@@ -47,6 +47,7 @@
         - exfalso
         - parole
         - quod-libet
+        - simplescreenrecorder
         - synaptic
         - transmission-gtk
         - uxterm
