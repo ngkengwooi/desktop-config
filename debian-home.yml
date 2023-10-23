@@ -18,7 +18,6 @@
         - apostrophe
         - audacity
         - brasero
-        - chromium
         - clamtk
         - dialect
         - evolution-ews
@@ -86,15 +85,16 @@
         - unknown-horizons    
         - unrar
         - warzone2100
-        - webext-ublock-origin-chromium
         - webext-ublock-origin-firefox        
       state: latest
       
   - name: Uninstall packages
     package:
       name:
+        - chromium
         - synaptic
         - vlc
+        - webext-ublock-origin-chromium
       state: absent
     
   - name: Enable FlatHub
