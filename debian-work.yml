@@ -107,7 +107,6 @@
       method: system
       state: present
     with_items:
-      - us.zoom.Zoom
       - org.zotero.Zotero
     when: ansible_architecture == "x86_64"
   
@@ -118,6 +117,7 @@
       state: absent
     with_items:
       - com.microsoft.Teams
+      - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
     
   - name: Schedule maintenance
