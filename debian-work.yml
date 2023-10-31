@@ -77,11 +77,20 @@
   - name: Uninstall packages
     package:
       name:
+        - anthy
         - chromium
+        - debian-reference-*
         - gnome-games
+        - goldendict
+        - hdate-applet
+        - ibus-mozc
+        - mlterm
         - synaptic
+        - thunderbird
+        - transmission-*
         - vlc
         - webext-ublock-origin-chromium
+        - xiterm+thai
       state: absent
     
   - name: Enable FlatHub
