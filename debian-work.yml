@@ -48,8 +48,6 @@
         - lyx
         - mkvtoolnix-gui
         - mp3wrap
-        - nautilus-nextcloud
-        - nextcloud-desktop
         - obs-studio
         - openssh-server
         - pdfarranger
@@ -85,6 +83,8 @@
         - hdate-applet
         - ibus-mozc
         - mlterm
+        - nautilus-nextcloud
+        - nextcloud-desktop
         - synaptic
         - thunderbird
         - transmission-*
