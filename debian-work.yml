@@ -75,13 +75,13 @@
   - name: Uninstall packages
     package:
       name:
-        - anthy
+        - anthy-*
         - chromium
         - debian-reference-*
         - gnome-games
         - goldendict
         - hdate-applet
-        - ibus-mozc
+        - mozc-*
         - mlterm
         - nautilus-nextcloud
         - nextcloud-desktop
