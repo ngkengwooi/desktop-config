@@ -84,18 +84,3 @@
       - org.freecadweb.FreeCAD
       - org.mozilla.firefox
     when: ansible_architecture == "x86_64"
-    
-  # Do not install Python packages using pip without venv
-  #- name: Uninstall Python modules
-  #  pip:
-  #    name:
-  #      - lastversion
-  #      - yt-dlp
-  #    state: absent
-      
-  - name: Schedule maintenance
-    cron:
-      name: "Hourly ansible-pull config"
-      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-gnome-bookworm.yml"
-      minute: "0"
-      user: root
