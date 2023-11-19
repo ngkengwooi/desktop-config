@@ -125,10 +125,3 @@
       - com.microsoft.Teams
       - us.zoom.Zoom
     when: ansible_architecture == "x86_64"
-    
-  - name: Schedule maintenance
-    cron:
-      name: "Hourly ansible-pull config"
-      job: "ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-home.yml"
-      minute: "0"
-      user: root
