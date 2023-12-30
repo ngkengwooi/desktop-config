@@ -10,16 +10,19 @@ if [ $EUID -eq 0 ]; then
   ################
   # Set up repos #
   ################
+  # Official Debian repos
   echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free non-free-firmware" > /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
-  apt-get -qq update
+  # Tailscale repo
+  echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/debian bookworm main" > /etc/apt/sources.list.d/tailscale.list
   
   #############################
   # Upgrade existing packages #
   #############################
-  apt-get -yy dist-upgrade
+  apt-get update
+  apt-get -y dist-upgrade
   
   ####################################
   # Make QT and GTK themes get along #
