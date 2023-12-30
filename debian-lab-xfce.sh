@@ -29,7 +29,7 @@ if [ $EUID -eq 0 ]; then
   #############################
   # Configure GRUB bootloader #
   #############################
-  sed -Ei "s/GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=3/" /etc/default/grub
+  sed -Ei "s/GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=0/" /etc/default/grub
   sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
   update-grub2
   
@@ -44,7 +44,7 @@ if [ $EUID -eq 0 ]; then
   # Hand over config to ansible #
   ###############################
   apt-get -yy install ansible git
-  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-lab-xfce-$CODENAME.yml
+  ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-xfce.yml
   
 else
   echo "Please execute this script as root."
