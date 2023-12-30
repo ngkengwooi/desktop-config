@@ -33,6 +33,8 @@
         - unrar
         - vlc
         - webext-ublock-origin-firefox
+        - yaru-theme-gtk
+        - yaru-theme-icon
       state: latest      
   - name: Uninstall packages
     package:
