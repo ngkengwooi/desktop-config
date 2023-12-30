@@ -15,14 +15,17 @@ if [ $EUID -eq 0 ]; then
   echo "deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
   echo "deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
-  # Tailscale repo
-  echo "deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/debian bookworm main" > /etc/apt/sources.list.d/tailscale.list
   
   #############################
   # Upgrade existing packages #
   #############################
   apt-get update
   apt-get -y dist-upgrade
+
+  #####################
+  # Install Tailscale #
+  #####################
+  curl -fsSL https://tailscale.com/install.sh | bash
   
   ####################################
   # Make QT and GTK themes get along #
