@@ -16,9 +16,7 @@
         - firmware-linux-nonfree
         - flatpak
         - fonts-roboto
-        - guvcview
         - ibus-libpinyin
-        - imagej
         - lame
         - lightdm-gtk-greeter-settings
         - p7zip-full
@@ -39,14 +37,9 @@
   - name: Uninstall packages
     package:
       name:
-        - arc-theme
-        - cheese
-        - chromium
         - exfalso
-        - obs-studio
         - parole
         - quod-libet
-        - simplescreenrecorder
         - synaptic
         - transmission-gtk
         - uxterm
