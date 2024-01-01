@@ -16,7 +16,12 @@ apt-get update
 apt-get -y dist-upgrade
 
 # Install some core utilities
-apt-get -y install ansible curl git
+apt-get -y install \
+  ansible \
+  git \
+  htop \
+  neofetch \
+  unattended-upgrades
 
 # Set up Tailscale
 curl -fsSL https://tailscale.com/install.sh | bash
