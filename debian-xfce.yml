@@ -1,11 +1,13 @@
 - hosts: localhost
   become: true
   tasks:
+  
   - name: Upgrade system
     apt:
       upgrade: dist
       update_cache: yes
-      autoremove: yes      
+      autoremove: yes
+      
   - name: Install packages
     package:
       name:
@@ -33,7 +35,8 @@
         - webext-ublock-origin-firefox
         - yaru-theme-gtk
         - yaru-theme-icon
-      state: latest      
+      state: latest
+      
   - name: Uninstall packages
     package:
       name:
@@ -47,21 +50,17 @@
         - xsane
         - xterm
         - webext-ublock-origin-chromium
-      state: absent      
+      state: absent
+      
   - name: Enable FlatHub
     flatpak_remote:
       name: flathub
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
-      state: present      
+      state: present
+      
   - name: Install system upgrade script
     get_url:
       url: https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/system-upgrade
       dest: /usr/local/bin/system-upgrade
-      mode: 0754      
-  - name: Schedule maintenance
-    cron:
-      name: "Hourly ansible-pull config"
-      job: "system-upgrade"
-      minute: "0"
-      user: root
+      mode: 0754
