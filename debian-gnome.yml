@@ -14,29 +14,22 @@
         - ffmpeg
         - filezilla
         - firefox-esr
+        - firmware-b43-installer
         - firmware-linux-nonfree
         - flatpak
-        - freecad
-        - gchempaint
-        - gcu-bin
-        - ghostwriter
         - gimp
         - gnome-shell-extension-caffeine
         - grsync
         - ibus-libpinyin
-        - imagej
         - inkscape
         - lame
-        - lyx
         - openssh-server
         - pdfarranger
-        - pronterface
-        - prusa-slicer
         - python3-pip
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
         - qt5-style-plugins
-        - qt6-gtk-platformtheme       
+        - qt6-gtk-platformtheme   
         - remmina
         - rhythmbox-plugin-alternative-toolbar
         - ttf-mscorefonts-installer
@@ -54,7 +47,6 @@
         - gnome-software-plugin-flatpak
         - synaptic
         - transmission-gtk
-        - webext-https-everywhere
       state: absent
     
   - name: Enable FlatHub
@@ -64,23 +56,23 @@
       method: system
       state: present
       
-  - name: Install flatpaks
-    flatpak:
-      name: "{{item}}"
-      method: system
-      state: present
-    with_items:
-      - org.zotero.Zotero
-      - us.zoom.Zoom
-    when: ansible_architecture == "x86_64"
+  #- name: Install flatpaks
+  #  flatpak:
+  #    name: "{{item}}"
+  #    method: system
+  #    state: present
+  #  with_items:
+  #    - org.zotero.Zotero
+  #    - us.zoom.Zoom
+  #  when: ansible_architecture == "x86_64"
     
-  - name: Uninstall flatpaks
-    flatpak:
-      name: "{{item}}"
-      method: system
-      state: absent
-    with_items:
-      - com.prusa3d.PrusaSlicer
-      - org.freecadweb.FreeCAD
-      - org.mozilla.firefox
-    when: ansible_architecture == "x86_64"
+  #- name: Uninstall flatpaks
+  #  flatpak:
+  #    name: "{{item}}"
+  #    method: system
+  #    state: absent
+  #  with_items:
+  #    - com.prusa3d.PrusaSlicer
+  #    - org.freecadweb.FreeCAD
+  #    - org.mozilla.firefox
+  #  when: ansible_architecture == "x86_64"
