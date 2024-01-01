@@ -34,6 +34,7 @@ sed -i "s/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/" /etc/default/grub
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
 update-grub2
 
-# Install system-upgrade script
+# Install custom scripts
 curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/usr/local/bin/system-upgrade -o /usr/local/bin/system-upgrade
-chmod +x /usr/local/bin/system-upgrade
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/usr/local/bin/nextcloud-folders -o /usr/local/bin/nextcloud-folders
+chmod +x /usr/local/bin/*
