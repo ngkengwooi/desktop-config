@@ -58,3 +58,9 @@
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
       state: present
+      
+  - name: Install system upgrade script
+    get_url:
+      url: https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/system-upgrade
+      dest: /usr/local/bin/system-upgrade
+      mode: 0754
