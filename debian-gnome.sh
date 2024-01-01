@@ -22,7 +22,7 @@ apt-get -y install ansible curl git
 curl -fsSL https://tailscale.com/install.sh | bash
 
 # Harmonise theming for QT apps
-echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
+echo "QT_STYLE_OVERRIDE=gtk gtk2" > /etc/environment
 
 # Configure boot behaviour
 sed -i "s/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/" /etc/default/grub
