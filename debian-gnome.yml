@@ -1,11 +1,13 @@
 - hosts: localhost
   become: true
-  tasks:   
+  tasks:
+  
   - name: Upgrade system
     apt:
       upgrade: dist
       update_cache: yes
-      autoremove: yes    
+      autoremove: yes
+      
   - name: Install packages
     package:
       name:
@@ -47,6 +49,7 @@
         - gnome-software-plugin-flatpak
         - synaptic
         - transmission-gtk
+        - zutty
       state: absent
     
   - name: Enable FlatHub
@@ -55,24 +58,3 @@
       flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
       method: system
       state: present
-      
-  #- name: Install flatpaks
-  #  flatpak:
-  #    name: "{{item}}"
-  #    method: system
-  #    state: present
-  #  with_items:
-  #    - org.zotero.Zotero
-  #    - us.zoom.Zoom
-  #  when: ansible_architecture == "x86_64"
-    
-  #- name: Uninstall flatpaks
-  #  flatpak:
-  #    name: "{{item}}"
-  #    method: system
-  #    state: absent
-  #  with_items:
-  #    - com.prusa3d.PrusaSlicer
-  #    - org.freecadweb.FreeCAD
-  #    - org.mozilla.firefox
-  #  when: ansible_architecture == "x86_64"
