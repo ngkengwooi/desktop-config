@@ -1,6 +1,6 @@
 #!/bin/bash -e
 ################################################################################
-# Script to set up Debian Linux with the GNOME desktop environment.
+# Script to set up Debian Linux.
 # Execute this script as superuser.
 ################################################################################
 
@@ -27,12 +27,13 @@ apt-get -y install \
 curl -fsSL https://tailscale.com/install.sh | bash
 
 # Harmonise theming for QT apps
-echo "QT_STYLE_OVERRIDE=gtk gtk2" > /etc/environment
+echo "QT_STYLE_OVERRIDE=gtk2" > /etc/environment
 
 # Configure boot behaviour
 sed -i "s/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/" /etc/default/grub
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
 update-grub2
 
-# Hand over config to ansible
-ansible-pull -U https://github.com/ngkengwooi/desktop-config debian-gnome.yml
+# Install system-upgrade script
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/usr/local/bin/system-upgrade -o /usr/local/bin/system-upgrade
+chmod +x /usr/local/bin/system-upgrade
