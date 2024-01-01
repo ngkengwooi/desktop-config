@@ -20,6 +20,7 @@
         - firmware-linux-nonfree
         - flatpak
         - gimp
+        - gnome-core
         - gnome-shell-extension-caffeine
         - grsync
         - ibus-libpinyin
