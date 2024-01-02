@@ -21,7 +21,8 @@
         - flatpak
         - gimp
         - gnome-core
-        - gnome-shell-extension-caffeine
+        - gnome-shell-extension-caffeine        
+        - gnome-software-plugin-flatpak
         - grsync
         - ibus-libpinyin
         - inkscape
@@ -44,10 +45,6 @@
     package:
       name:
         - chromium
-        - frogatto
-        - gnome-games
-        - gnome-software
-        - gnome-software-plugin-flatpak
         - synaptic
         - transmission-gtk
         - zutty
