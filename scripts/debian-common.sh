@@ -26,9 +26,6 @@ apt-get -y install \
 # Set up Tailscale
 curl -fsSL https://tailscale.com/install.sh | bash
 
-# Harmonise theming for QT apps
-echo "QT_STYLE_OVERRIDE=gtk2" > /etc/environment
-
 # Configure boot behaviour
 sed -i "s/GRUB_TIMEOUT=\d+/GRUB_TIMEOUT=0/" /etc/default/grub
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"/' /etc/default/grub
