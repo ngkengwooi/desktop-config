@@ -2,15 +2,16 @@
 
 Configuration scripts to configure Debian workstations.
 
-## Usage
+## Dependencies
 
-You need `curl` to pull the scripts to the local computer. To install it, run in the terminal: 
+You will need `curl` to pull the scripts to the local computer. To install it, run in the terminal: 
 
 ```
 sudo apt -y install curl
 ```
+## Usage
 
-Then, execute the following commands:
+Execute the following commands:
 
 - For Debian with the GNOME desktop environment:
   ```
