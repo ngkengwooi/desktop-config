@@ -10,14 +10,14 @@ You need `curl` to pull the scripts to the local computer. To install it, run in
 sudo apt -y install curl
 ```
 
-Then, execute the following command:
+Then, execute the following commands:
 
 - For Debian with the GNOME desktop environment:
   ```
   curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-gnome.sh | sudo bash
   ```
 
-- For Debian with the XFCE desktop environment:
+- Or, for Debian with the XFCE desktop environment instead of GNOME:
   ```
   curl -sSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-xfce.sh | sudo bash
   ```
