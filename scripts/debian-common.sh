@@ -33,6 +33,5 @@ update-grub2
 
 # Install custom scripts
 curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/system-upgrade.sh -o /usr/local/sbin/system-upgrade
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/gdm-banner.sh -o /usr/local/sbin/gdm-banner
 curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/nextcloud-folders.sh -o /usr/local/bin/nextcloud-folders
 chmod +x /usr/local/bin/* /usr/local/sbin/*
