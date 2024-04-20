@@ -31,7 +31,7 @@
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
-        - vlc
+        - mpv
         - webext-ublock-origin-firefox
         - yaru-theme-gtk
         - yaru-theme-icon
@@ -46,6 +46,7 @@
         - synaptic
         - transmission-gtk
         - uxterm
+        - vlc
         - xfburn
         - xsane
         - xterm
