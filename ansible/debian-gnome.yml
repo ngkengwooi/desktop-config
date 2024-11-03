@@ -15,7 +15,7 @@
         - adwaita-qt6
         - ffmpeg
         - filezilla
-        - firefox-esr
+        - firefox
         - firmware-b43-installer
         - firmware-linux-nonfree
         - flatpak
@@ -46,6 +46,7 @@
     package:
       name:
         - chromium
+        - firefox-esr
         - synaptic
         - transmission-gtk
         - zutty
