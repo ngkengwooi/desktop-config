@@ -12,6 +12,12 @@ echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free non-fre
 deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free
 deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free
 deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free" > /etc/apt/sources.list
+
+# Set up Mozilla Firefox repo
+curl -fsSL "https://packages.mozilla.org/apt/repo-signing-key.gpg" | gpg --dearmor -o "/usr/share/keyrings/firefox-archive-keyring.gpg"
+echo "deb [signed-by=/usr/share/keyrings/firefox-archive-keyring.gpg] https://packages.mozilla.org/apt mozilla main" | tee /etc/apt/sources.list.d/firefox.list
+
+# Update system
 apt-get update
 apt-get -y dist-upgrade
 
