@@ -17,6 +17,7 @@
         - firmware-b43-installer
         - firmware-linux-nonfree
         - flatpak
+        - fonts-cantarell
         - fonts-roboto
         - gchempaint
         - gcu-bin
