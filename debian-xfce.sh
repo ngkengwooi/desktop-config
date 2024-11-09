@@ -8,7 +8,7 @@
 curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/debian-common.sh | bash
 
 # Harmonise theming for QT apps
-echo "QT_STYLE_OVERRIDE=gtk2" > /etc/environment
+echo "QT_STYLE_OVERRIDE=gtk3" > /etc/environment
 
 # Use Ansible to manage apps
 ansible-pull -U https://github.com/ngkengwooi/desktop-config ansible/debian-xfce.yml
