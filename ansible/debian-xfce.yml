@@ -18,20 +18,29 @@
         - firmware-linux-nonfree
         - flatpak
         - fonts-roboto
+        - gchempaint
+        - gcu-bin
+        - gimp
         - ibus-libpinyin
+        - imagej
+        - inkscape
         - lame
-        - lightdm-gtk-greeter-settings
+        - lightdm-gtk-greeter-settings        
+        - opendrop
         - p7zip-full
+        - pdfarranger
         - python3-pip
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - remmina
+        - rhythmbox
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
-        - mpv
+        - vlc
+        - xfce4-goodies
         - yaru-theme-gtk
         - yaru-theme-icon
       state: latest
@@ -46,8 +55,6 @@
         - synaptic
         - transmission-gtk
         - uxterm
-        - vlc
-        - xfburn
         - xsane
         - xterm
         - webext-ublock-origin-chromium
