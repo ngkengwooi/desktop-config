@@ -12,9 +12,8 @@
     package:
       name:
         - task-xfce-desktop
-        - evince
+        - atril
         - ffmpeg
-        - file-roller
         - firefox
         - firmware-b43-installer
         - firmware-linux-nonfree
@@ -39,12 +38,12 @@
         - qt6-gtk-platformtheme
         - remmina
         - rhythmbox
-        - simple-scan
         - simplescreenrecorder
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
         - vlc
+        - xarchiver
         - xfce4-goodies
         - yaru-theme-gtk
         - yaru-theme-icon
@@ -53,7 +52,8 @@
   - name: Uninstall packages
     package:
       name:
-        - atril
+        - evince
+        - file-roller
         - exfalso
         - firefox-esr
         - gnome-calendar
@@ -66,11 +66,11 @@
         - gnome-weather
         - parole
         - quod-libet
+        - simple-scan
         - synaptic
         - totem
         - transmission-gtk
         - uxterm
-        - xarchiver
         - xfburn
         - xsane
         - xterm
