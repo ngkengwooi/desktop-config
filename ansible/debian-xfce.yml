@@ -25,7 +25,6 @@
         - gcu-bin
         - gimp
         - gnuplot
-        - goldendict
         - ibus-libpinyin
         - imagej
         - inkscape
@@ -70,6 +69,7 @@
         - gnome-shell
         - gnome-software
         - gnome-weather
+        - goldendict
         - parole
         - quod-libet
         - simple-scan
