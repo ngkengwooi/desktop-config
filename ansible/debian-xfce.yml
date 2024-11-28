@@ -20,10 +20,12 @@
         - flatpak
         - fonts-cantarell
         - fonts-roboto
+        - galculator
         - gchempaint
         - gcu-bin
         - gimp
         - gnuplot
+        - goldendict
         - ibus-libpinyin
         - imagej
         - inkscape
@@ -58,8 +60,10 @@
         - file-roller
         - exfalso
         - firefox-esr
+        - gnome-calculator
         - gnome-calendar
         - gnome-core
+        - gnome-dictionary
         - gnome-documents
         - gnome-games
         - gnome-maps
