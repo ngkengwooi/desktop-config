@@ -40,6 +40,7 @@
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - remmina
+        - ristretto
         - rhythmbox
         - simplescreenrecorder
         - ttf-mscorefonts-installer
@@ -47,7 +48,8 @@
         - unrar
         - vlc
         - xarchiver
-        - xfce4-goodies
+        - xfce4-dict
+        - xfce4-taskmanager
         - yaru-theme-gtk
         - yaru-theme-icon
       state: latest
@@ -78,6 +80,7 @@
         - transmission-gtk
         - uxterm
         - xfburn
+        - xfce4-goodies
         - xsane
         - xterm
         - webext-ublock-origin-chromium
