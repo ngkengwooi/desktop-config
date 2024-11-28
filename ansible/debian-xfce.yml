@@ -12,7 +12,9 @@
     package:
       name:
         - task-xfce-desktop
+        - evince
         - ffmpeg
+        - file-roller
         - firefox
         - firmware-b43-installer
         - firmware-linux-nonfree
@@ -37,6 +39,8 @@
         - qt6-gtk-platformtheme
         - remmina
         - rhythmbox
+        - simple-scan
+        - simplescreenrecorder
         - ttf-mscorefonts-installer
         - unattended-upgrades
         - unrar
@@ -49,16 +53,28 @@
   - name: Uninstall packages
     package:
       name:
+        - atril
         - exfalso
         - firefox-esr
+        - gnome-calendar
+        - gnome-core
+        - gnome-documents
+        - gnome-games
+        - gnome-maps
+        - gnome-shell
+        - gnome-software
+        - gnome-weather
         - parole
         - quod-libet
         - synaptic
+        - totem
         - transmission-gtk
         - uxterm
+        - xarchiver
         - xsane
         - xterm
         - webext-ublock-origin-chromium
+        - webext-ublock-origin-firefox
       state: absent
       
   - name: Enable FlatHub
