@@ -23,11 +23,13 @@
         - gchempaint
         - gcu-bin
         - gimp
+        - gnuplot
         - ibus-libpinyin
         - imagej
         - inkscape
         - lame
-        - lightdm-gtk-greeter-settings        
+        - lightdm-gtk-greeter-settings
+        - lyx
         - opendrop
         - p7zip-full
         - pdfarranger
