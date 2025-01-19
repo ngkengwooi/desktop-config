@@ -38,6 +38,7 @@
         - python3-pip
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
+        - qt5-style-kvantum
         - qt5-style-plugins
         - qt6-gtk-platformtheme
         - remmina
