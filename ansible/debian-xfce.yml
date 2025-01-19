@@ -13,6 +13,8 @@
       name:
         - task-xfce-desktop
         - atril
+        - brasero
+        - cheese
         - ffmpeg
         - filezilla
         - firefox
