@@ -31,6 +31,7 @@
         - musescore3
         - openssh-server
         - pdfarranger
+        - puddletag
         - python3-pip
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
