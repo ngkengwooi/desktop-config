@@ -1,0 +1,52 @@
+- hosts: localhost
+  become: true
+  tasks:
+  
+  - name: Upgrade system
+    apt:
+      upgrade: dist
+      update_cache: yes
+      autoremove: yes
+      
+  - name: Install packages
+    package:
+      name:
+        - adwaita-qt
+        - adwaita-qt6
+        - ffmpeg
+        - filezilla
+        - firefox-esr
+        - flatpak
+        - gimp
+        - gnome-core
+        - gnome-shell-extension-caffeine        
+        - gnome-software-plugin-flatpak
+        - grsync
+        - ibus-libpinyin
+        - inkscape
+        - lame
+        - malcontent
+        - openssh-server
+        - pdfarranger
+        - pipx
+        - qgnomeplatform-qt5
+        - qt5-gtk-platformtheme
+        - qt5-style-plugins
+        - qt6-gtk-platformtheme   
+        - remmina
+        - unattended-upgrades
+      state: latest
+      
+  - name: Uninstall packages
+    package:
+      name:
+        - synaptic
+        - transmission-gtk
+      state: absent
+    
+  - name: Enable FlatHub
+    flatpak_remote:
+      name: flathub
+      flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      method: system
+      state: present
