@@ -27,7 +27,7 @@
         - lame
         - libreoffice
         - libreoffice-gnome
-        - libreoffice-java
+        - libreoffice-java-common
         - malcontent
         - openssh-server
         - pdfarranger
