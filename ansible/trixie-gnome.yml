@@ -40,6 +40,14 @@
         - unattended-upgrades
         - webext-ublock-origin-firefox
       state: latest
+
+  - name: Uninstall packages
+    package:
+      name:
+        - freecad
+        - lutris
+        - prusa-slicer        
+      state: latest
       
   - name: Uninstall packages
     package:
@@ -58,8 +66,11 @@
   - name: Install flatpaks
     community.general.flatpak:
       name:
+        - com.bitwarden.desktop
         - com.github.IsmaelMartinez.teams_for_linux
         - com.prusa3d.PrusaSlicer
+        - com.valvesoftware.Steam
+        - net.lutris.Lutris
         - org.freecad.FreeCAD
         - org.vinegarhq.Sober
         - org.zotero.Zotero
