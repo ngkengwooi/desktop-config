@@ -31,7 +31,6 @@
         - pipx
         - qgnomeplatform-qt5
         - qt5-gtk-platformtheme
-        - qt5-style-plugins
         - qt6-gtk-platformtheme   
         - remmina
         - unattended-upgrades
