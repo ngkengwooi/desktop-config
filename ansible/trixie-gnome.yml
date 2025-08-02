@@ -30,6 +30,7 @@
         - pdfarranger
         - pipx
         - qgnomeplatform-qt5
+        - qgnomeplatform-qt6
         - qt5-gtk-platformtheme
         - qt6-gtk-platformtheme   
         - remmina
