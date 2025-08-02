@@ -25,6 +25,9 @@
         - ibus-libpinyin
         - inkscape
         - lame
+        - libreoffice
+        - libreoffice-gnome
+        - libreoffice-java
         - malcontent
         - openssh-server
         - pdfarranger
