@@ -38,6 +38,7 @@
         - qt6-gtk-platformtheme   
         - remmina
         - unattended-upgrades
+        - webext-ublock-origin-firefox
       state: latest
       
   - name: Uninstall packages
