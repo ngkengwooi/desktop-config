@@ -45,6 +45,7 @@
         - qt5-gtk-platformtheme
         - qt6-gtk-platformtheme   
         - remmina
+        - rhythmbox
         - supertux
         - supertuxkart
         - unattended-upgrades
