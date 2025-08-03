@@ -29,6 +29,7 @@
         - gnome-mastermind        
         - gnome-shell-extension-caffeine        
         - gnome-software-plugin-flatpak
+        - gnome-tweaks
         - grsync
         - htop
         - ibus-libpinyin
