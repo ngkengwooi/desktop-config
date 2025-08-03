@@ -26,7 +26,8 @@
         - gimp
         - gnome-core
         - gnome-games
-        - gnome-mastermind        
+        - gnome-mastermind
+        - gnome-remote-desktop
         - gnome-shell-extension-caffeine        
         - gnome-software-plugin-flatpak
         - gnome-tweaks
@@ -47,7 +48,6 @@
         - qt5-gtk-platformtheme
         - qt6-gtk-platformtheme   
         - remmina
-        - rhythmbox
         - supertux
         - supertuxkart
         - unattended-upgrades
@@ -62,6 +62,7 @@
         - gufw
         - lutris
         - prusa-slicer
+        - rhythmbox
         - synaptic
         - transmission-gtk
       state: absent
