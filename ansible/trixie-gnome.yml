@@ -79,6 +79,7 @@
         - com.valvesoftware.Steam
         - net.lutris.Lutris
         - org.freecad.FreeCAD
+        - org.localsend.localsend_app
         - org.vinegarhq.Sober
         - org.zotero.Zotero
       state: latest   
