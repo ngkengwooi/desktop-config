@@ -15,7 +15,6 @@
         - adwaita-qt6
         - apostrophe
         - brasero
-        - cheese
         - dialect
         - ffmpeg
         - filezilla
@@ -54,6 +53,7 @@
   - name: Uninstall packages
     package:
       name:
+        - cheese
         - freecad
         - gufw
         - lutris
