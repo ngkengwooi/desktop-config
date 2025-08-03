@@ -13,12 +13,20 @@
       name:
         - adwaita-qt
         - adwaita-qt6
+        - apostrophe
+        - brasero
+        - cheese
+        - dialect
         - ffmpeg
         - filezilla
         - firefox-esr
         - flatpak
+        - foliate
+        - frogatto
         - gimp
         - gnome-core
+        - gnome-games
+        - gnome-mastermind        
         - gnome-shell-extension-caffeine        
         - gnome-software-plugin-flatpak
         - grsync
@@ -37,6 +45,8 @@
         - qt5-gtk-platformtheme
         - qt6-gtk-platformtheme   
         - remmina
+        - supertux
+        - supertuxkart
         - unattended-upgrades
         - webext-ublock-origin-firefox
       state: latest
@@ -45,6 +55,7 @@
     package:
       name:
         - freecad
+        - gufw
         - lutris
         - prusa-slicer
         - synaptic
