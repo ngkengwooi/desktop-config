@@ -29,6 +29,7 @@
         - gnome-shell-extension-caffeine        
         - gnome-software-plugin-flatpak
         - grsync
+        - htop
         - ibus-libpinyin
         - inkscape
         - lame
