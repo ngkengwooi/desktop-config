@@ -22,6 +22,8 @@
         - firefox-esr
         - flatpak
         - foliate
+        - fonts-crosextra-caladea
+        - fonts-crosextra-carlito
         - frogatto
         - gimp
         - gnome-core
