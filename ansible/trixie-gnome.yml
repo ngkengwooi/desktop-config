@@ -50,6 +50,7 @@
         - remmina
         - supertux
         - supertuxkart
+        - ttf-mscorefonts-installer
         - unattended-upgrades
         - webext-ublock-origin-firefox
       state: latest
