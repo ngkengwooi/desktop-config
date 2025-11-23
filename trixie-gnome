@@ -4,14 +4,16 @@
 # Execute as superuser.
 ################################################################################
 
+CODENAME=trixie
+
 # Apply common configuration
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/trixie-common.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/$CODENAME-common.sh | bash
 
 # Harmonise theming for QT apps
 echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
 
 # Use Ansible to manage apps
-ansible-pull -U https://github.com/ngkengwooi/desktop-config ansible/trixie-gnome.yml
+ansible-pull -U https://github.com/ngkengwooi/desktop-config ansible/$CODENAME-gnome.yml
 
 # Final update and cleanup
-system-upgrade
+system-update
