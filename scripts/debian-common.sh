@@ -5,7 +5,7 @@
 ################################################################################
 
 # Change this to the latest stable release
-CODENAME=bookworm
+CODENAME=trixie
 
 # Set up Debian's official repos
 echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free non-free-firmware
@@ -38,6 +38,9 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash 
 update-grub2
 
 # Install custom scripts
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/system-upgrade.sh -o /usr/local/sbin/system-upgrade
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/nextcloud-folders.sh -o /usr/local/bin/nextcloud-folders
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/system-update -o /usr/local/sbin/system-update
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/nextcloud-folders -o /usr/local/bin/nextcloud-folders
 chmod +x /usr/local/bin/* /usr/local/sbin/*
+
+# Modernise APT sources
+apt -y modernize-sources
