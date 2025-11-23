@@ -7,7 +7,7 @@
 CODENAME=trixie
 
 # Apply common configuration
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/$CODENAME-common.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/$CODENAME-common | bash
 
 # Harmonise theming for QT apps
 echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
