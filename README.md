@@ -15,10 +15,10 @@ Execute the following commands:
 
 - For Debian with the GNOME desktop environment:
   ```
-  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/trixie-gnome.sh | sudo bash
+  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/gnome-desktop | sudo bash
   ```
 
-- Or, for Debian with the XFCE desktop environment instead of GNOME:
+- For Debian with the XFCE desktop environment:
   ```
-  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/trixie-xfce.sh | sudo bash
+  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/xfce-desktop | sudo bash
   ```
