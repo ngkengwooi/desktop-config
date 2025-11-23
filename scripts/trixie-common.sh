@@ -23,6 +23,8 @@ apt-get -y dist-upgrade
 # Install some core utilities
 apt-get -y install \
   ansible \
+  docker.io \
+  docker-compose \
   git \
   unattended-upgrades
 
