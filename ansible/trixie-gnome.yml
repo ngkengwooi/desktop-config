@@ -90,4 +90,5 @@
         - org.localsend.localsend_app
         - org.vinegarhq.Sober
         - org.zotero.Zotero
+        - us.zoom.Zoom
       state: latest   
