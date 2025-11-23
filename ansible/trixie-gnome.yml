@@ -81,8 +81,6 @@
     community.general.flatpak:
       name:
         - com.bitwarden.desktop
-        - com.github.IsmaelMartinez.teams_for_linux
-        - com.lablicate.OpenChrom
         - com.prusa3d.PrusaSlicer
         - com.valvesoftware.Steam
         - net.lutris.Lutris
