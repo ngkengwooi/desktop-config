@@ -15,14 +15,10 @@ Execute the following commands:
 
 - For Debian with the GNOME desktop environment:
   ```
-  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-gnome.sh | sudo bash
+  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/trixie-gnome.sh | sudo bash
   ```
 
 - Or, for Debian with the XFCE desktop environment instead of GNOME:
   ```
-  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/debian-xfce.sh | sudo bash
-  ```
-- To install Docker:
-  ```
-  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/docker.sh | sudo bash
+  curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/trixie-xfce.sh | sudo bash
   ```
