@@ -4,15 +4,17 @@
 # Execute this script as superuser.
 ################################################################################
 
+CODENAME=trixie
+
 # Set up Debian's official repos
-echo "deb https://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
-deb https://deb.debian.org/debian-security/ trixie-security main contrib non-free
-#deb https://deb.debian.org/debian/ trixie-updates main contrib non-free
-#deb https://deb.debian.org/debian/ trixie-backports main contrib non-free" > /etc/apt/sources.list
+echo "deb https://deb.debian.org/debian/ $CODENAME main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian-security/ $CODENAME-security main contrib non-free
+deb https://deb.debian.org/debian/ $CODENAME-updates main contrib non-free
+deb https://deb.debian.org/debian/ $CODENAME-backports main contrib non-free" > /etc/apt/sources.list
 
 # Set up Mozilla Firefox repo
-#curl -fsSL "https://packages.mozilla.org/apt/repo-signing-key.gpg" | gpg --dearmor -o "/usr/share/keyrings/firefox-archive-keyring.gpg"
-#echo "deb [signed-by=/usr/share/keyrings/firefox-archive-keyring.gpg] https://packages.mozilla.org/apt mozilla main" | tee /etc/apt/sources.list.d/firefox.list
+curl -fsSL "https://packages.mozilla.org/apt/repo-signing-key.gpg" | gpg --dearmor -o "/usr/share/keyrings/firefox-archive-keyring.gpg"
+echo "deb [signed-by=/usr/share/keyrings/firefox-archive-keyring.gpg] https://packages.mozilla.org/apt mozilla main" | tee /etc/apt/sources.list.d/firefox.list
 
 # Update system
 apt-get update
@@ -33,6 +35,9 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT="splash 
 update-grub2
 
 # Install custom scripts
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/system-upgrade.sh -o /usr/local/sbin/system-upgrade
-curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/nextcloud-folders.sh -o /usr/local/bin/nextcloud-folders
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/system-update -o /usr/local/sbin/system-update
+curl -fsSL https://raw.githubusercontent.com/ngkengwooi/desktop-config/main/scripts/nextcloud-folders -o /usr/local/bin/nextcloud-folders
 chmod +x /usr/local/bin/* /usr/local/sbin/*
+
+# Modernise APT sources
+apt -y modernize-sources
