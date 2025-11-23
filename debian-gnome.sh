@@ -14,4 +14,4 @@ echo "QT_STYLE_OVERRIDE=Adwaita" > /etc/environment
 ansible-pull -U https://github.com/ngkengwooi/desktop-config ansible/debian-gnome.yml
 
 # Final update and cleanup
-system-upgrade
+system-update
