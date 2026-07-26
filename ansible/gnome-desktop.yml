@@ -13,27 +13,16 @@
       name:
         - adwaita-qt
         - adwaita-qt6
-        - apostrophe
-        - brasero
-        - cpu-x
         - dialect
         - ffmpeg
         - filezilla
-        - firefox-esr
         - flatpak
-        - foliate
         - fonts-crosextra-caladea
         - fonts-crosextra-carlito
-        - frogatto
         - gimp
         - gnome-core
-        - gnome-games
-        - gnome-mastermind
         - gnome-remote-desktop
-        - gnome-shell-extension-caffeine        
-        - gnome-software-plugin-flatpak
         - gnome-tweaks
-        - grsync
         - htop
         - ibus-libpinyin
         - inkscape
@@ -50,17 +39,15 @@
         - qt5-gtk-platformtheme
         - qt6-gtk-platformtheme   
         - remmina
-        - supertux
-        - supertuxkart
         - ttf-mscorefonts-installer
         - unattended-upgrades
-        - webext-ublock-origin-firefox
       state: latest
 
   - name: Uninstall packages
     package:
       name:
         - cheese
+        - firefox-esr
         - freecad
         - gufw
         - lutris
@@ -81,11 +68,8 @@
     community.general.flatpak:
       name:
         - com.bitwarden.desktop
-        - com.prusa3d.PrusaSlicer
-        - com.valvesoftware.Steam
-        - net.lutris.Lutris
-        - org.freecad.FreeCAD
+        - org.chromium.Chromium
         - org.localsend.localsend_app
-        - org.vinegarhq.Sober
+        - org.mozilla.firefox
         - org.zotero.Zotero
       state: latest   
