@@ -3,30 +3,22 @@
     "ExtensionSettings": {
       "uBlock0@raymondhill.net": {
         "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
-        "updates_disabled": false,
-        "private_browsing": true
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
       },
-
       "@contain-facebook": {
         "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/facebook-container/latest.xpi",
-        "updates_disabled": false,
-        "private_browsing": true
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/facebook-container/latest.xpi"
       },
-
       "@testpilot-containers": {
         "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi",
-        "updates_disabled": false,
-        "private_browsing": true
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/latest.xpi"
       }
     },
 
     "Proxy": {
       "Mode": "manual",
       "HTTPProxy": "192.168.0.254:8080",
-      "UseHTTPProxyForHTTPS": true,
+      "SSLProxy": "192.168.0.254:8080",
       "Passthrough": "192.168.0.0/24,localhost,127.0.0.1",
       "Locked": true
     },
@@ -34,8 +26,6 @@
     "DNSOverHTTPS": {
       "Enabled": false
     },
-
-    "HTTPSOnlyMode": "force_enabled",
 
     "SearchEngines": {
       "Default": "DuckDuckGo",
@@ -54,8 +44,6 @@
 
     "DisablePocket": true,
 
-    "DisableFirefoxScreenshots": true,
-
     "OfferToSaveLogins": false,
 
     "PasswordManagerEnabled": false,
@@ -64,78 +52,16 @@
 
     "BackgroundAppUpdate": true,
 
-    "DisableAppUpdate": false,
+    "Homepage": {
+      "StartPage": "homepage",
+      "URL": "about:home",
+      "Locked": true
+    },
 
-    "Preferences": {
-      "browser.search.suggest.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
+    "NoDefaultBookmarks": true,
 
-      "browser.urlbar.suggest.searches": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "browser.urlbar.suggest.quicksuggest.sponsored": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "browser.urlbar.suggest.quicksuggest.nonsponsored": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "privacy.globalprivacycontrol.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-
-      "privacy.donottrackheader.enabled": {
-        "Value": true,
-        "Status": "locked"
-      },
-
-      "extensions.formautofill.creditCards.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "extensions.formautofill.addresses.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "signon.rememberSignons": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "network.http.windows-sso.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "browser.ml.chat.enabled": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "browser.ml.enable": {
-        "Value": false,
-        "Status": "locked"
-      },
-
-      "dom.disable_open_during_load": {
-        "Value": true,
-        "Status": "locked"
-      },
-
-      "intl.accept_languages": {
-        "Value": "en-GB,en",
-        "Status": "locked"
-      }
+    "PopupBlocking": {
+      "Default": true
     }
   }
 }
