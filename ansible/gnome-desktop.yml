@@ -22,6 +22,7 @@
         - gimp
         - gnome-core
         - gnome-remote-desktop
+        - gnome-software-plugin-flatpak
         - gnome-tweaks
         - htop
         - ibus-libpinyin
